@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faAnglesDown, faAnglesUp, faBookOpen, faBookmark, faBrain, faComment, faDiceFive, faHandFist, faHeart, faHeartPulse, faLightbulb, faPerson, faPersonRunning, faRulerCombined, faShield, faShieldHalved, faShieldHeart, faShieldVirus, faStar, faTableCells} from '@fortawesome/free-solid-svg-icons'
@@ -83,16 +83,45 @@ const MonsterDetail = (props) => {
 
   return (
     <>
+
+
+
       {monster ? (
       <>
-        <div className="card text-white bg-secondary mb-3 border-primary" style={{margin: "8px"}}>
+
+      
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+          <li className="breadcrumb-item"><Link to="/Monsters">Monsters</Link></li>
+          <li className="breadcrumb-item active">{monster["index"]}</li>
+        </ol>
+      
+      <img
+        src={`public/img/monsters/${monster["index"]}.png`}
+        alt={`public/img/monsters/${monster["index"]}.png`}
+        style={{
+          position: "fixed",
+          top: "50%",       // Vertically center the image
+          left: "50%",      // Horizontally center the image
+          transform: "translate(-50%, -50%)", // Center it perfectly
+          zIndex: "-1",
+          opacity: "1"
+        }}
+      />
+
+
+        <div className="card text-white bg-secondary mb-3 border-primary" style={{margin: "8px", opacity: "0.95"}}>
+
+
 
           <div className="card-header" style={{display: "flex", flexDirection: "column", alignItems: "flex-start"}}>
             <h2 style={{fontWeight: "bold", textShadow: "2px 1px 0px rgba(0,0,0,0.75)", color: getNameColor(monster["challenge_rating"])}}>{monster.name}</h2>
-            <span style={{opacity: "0.25"}}>&nbsp;({monster.index})</span>
+            {/* <span style={{opacity: "0.25"}}>&nbsp;({monster.index})</span> */}
           </div>
 
           <div className="card-body">
+
+          
 
             <div>
               <label className="form-label mt-4" style={{marginLeft: "1%"}}>Challenge Rating: {monster["challenge_rating"]}</label>
@@ -104,57 +133,81 @@ const MonsterDetail = (props) => {
               </div>
             </div>
 
-            <div style={{display: "flex", flexDirection: "column", flexWrap: "wrap"}}>
+            <div style={{display: "flex", flexDirection: "row"}}>
 
-              <table className="table table-hover" style={{width: "98%", margin: "1%"}}>
-                <thead className="table-primary">
-                  <tr> 
-                    <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faShield} size="2x" color=""/>AC</div></th>
-                    <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faHeart} size="2x" color=""/>HP</div></th>
-                    <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faDiceFive} size="2x" color=""/>Hit Dice</div></th>
-                    <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faStar} size="2x" color=""/>XP</div></th>
-                    <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faRulerCombined} size="2x" color=""/>Size</div></th>
-                    <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faBookOpen} size="2x" color=""/>Type</div></th>
-                    <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faBookmark} size="2x" color=""/>Sub-Type</div></th>
-                    <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faTableCells} size="2x" color=""/>Alignment</div></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="table-dark">
-                    <td><div style={cellStyle}>{monster && monster["armor_class"][0].value}</div></td>
-                    <td><div style={cellStyle}>{monster && monster["hit_points"]}</div></td>
-                    <td><div style={cellStyle}>{monster && monster["hit_dice"]}</div></td>
-                    <td><div style={cellStyle}>{monster && monster["xp"]}</div></td>
-                    <td><div style={cellStyle}>{monster && monster["size"]}</div></td>
-                    <td><div style={cellStyle}>{monster && monster["type"]}</div></td>
-                    <td><div style={cellStyle}>{monster && monster["subtype"]}</div></td>
-                    <td><div style={cellStyle}>{monster && monster["alignment"]}</div></td>                    
-                  </tr>
-                </tbody>
-              </table>
+            <div className="card-header" style={{ width: "33.33%", border: `2px solid ${getNameColor(monster["challenge_rating"])}`, borderRadius: "16px", position: "relative" }}>
 
-              <table className="table table-hover" style={{width: "98%", margin: "1%"}}>
-                <thead className="table-primary">
-                  <tr>
-                    <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faHandFist} size="2x" color=""/>STR</div></th>
-                    <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faPersonRunning} size="2x" color=""/>DEX</div></th>
-                    <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faHeartPulse} size="2x" color=""/>CON</div></th>
-                    <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faBrain} size="2x" color=""/>INT</div></th>
-                    <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faLightbulb} size="2x" color=""/>WIS</div></th>
-                    <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faComment} size="2x" color=""/>CHA</div></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="table-dark">
-                    <td><div style={cellStyle}>{monster && monster["strength"]}</div></td>
-                    <td><div style={cellStyle}>{monster && monster["dexterity"]}</div></td>
-                    <td><div style={cellStyle}>{monster && monster["constitution"]}</div></td>
-                    <td><div style={cellStyle}>{monster && monster["intelligence"]}</div></td>
-                    <td><div style={cellStyle}>{monster && monster["wisdom"]}</div></td>
-                    <td><div style={cellStyle}>{monster && monster["charisma"]}</div></td>
-                  </tr>
-                </tbody>
-              </table>
+              <img
+                src={`public/img/monsters/${monster["index"]}.png`}
+                alt={`public/img/monsters/${monster["index"]}.png`}
+                style={{
+                  borderRadius: "16px",
+                  maxHeight: "256px",
+                  maxWidth: "100%",  // Allow the width to adjust proportionally
+                  position: "absolute", // Position the image absolutely
+                  top: "50%", // Vertically center the image
+                  left: "50%", // Horizontally center the image
+                  transform: "translate(-50%, -50%)" // Center it perfectly
+                }}
+              />
+            </div>
+
+
+              <div style={{width: "66.66%", display: "flex", flexDirection: "column", justifyContent: "space-between"}}>
+
+                <table className="table table-hover" style={{width: "98%", margin: "1%"}}>
+                  <thead className="table-info">
+                    <tr> 
+                      <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faShield} size="2x" color=""/>AC</div></th>
+                      <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faHeart} size="2x" color=""/>HP</div></th>
+                      <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faDiceFive} size="2x" color=""/>Hit Dice</div></th>
+                      <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faStar} size="2x" color=""/>XP</div></th>
+                      <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faRulerCombined} size="2x" color=""/>Size</div></th>
+                      <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faBookOpen} size="2x" color=""/>Type</div></th>
+                      <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faBookmark} size="2x" color=""/>Sub-Type</div></th>
+                      <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faTableCells} size="2x" color=""/>Alignment</div></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="table-dark">
+                      <td><div style={cellStyle}>{monster && monster["armor_class"][0].value}</div></td>
+                      <td><div style={cellStyle}>{monster && monster["hit_points"]}</div></td>
+                      <td><div style={cellStyle}>{monster && monster["hit_dice"]}</div></td>
+                      <td><div style={cellStyle}>{monster && monster["xp"]}</div></td>
+                      <td><div style={cellStyle}>{monster && monster["size"]}</div></td>
+                      <td><div style={cellStyle}>{monster && monster["type"]}</div></td>
+                      <td><div style={cellStyle}>{monster && monster["subtype"]}</div></td>
+                      <td><div style={cellStyle}>{monster && monster["alignment"]}</div></td>                    
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table className="table table-hover" style={{width: "98%", margin: "1%"}}>
+                  <thead className="table-primary">
+                    <tr>
+                      <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faHandFist} size="2x" color=""/>STR</div></th>
+                      <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faPersonRunning} size="2x" color=""/>DEX</div></th>
+                      <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faHeartPulse} size="2x" color=""/>CON</div></th>
+                      <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faBrain} size="2x" color=""/>INT</div></th>
+                      <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faLightbulb} size="2x" color=""/>WIS</div></th>
+                      <th><div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", fontSize: "18px"}}><FontAwesomeIcon icon={faComment} size="2x" color=""/>CHA</div></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="table-dark">
+                      <td><div style={cellStyle}>{monster && monster["strength"]}</div></td>
+                      <td><div style={cellStyle}>{monster && monster["dexterity"]}</div></td>
+                      <td><div style={cellStyle}>{monster && monster["constitution"]}</div></td>
+                      <td><div style={cellStyle}>{monster && monster["intelligence"]}</div></td>
+                      <td><div style={cellStyle}>{monster && monster["wisdom"]}</div></td>
+                      <td><div style={cellStyle}>{monster && monster["charisma"]}</div></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+
+              
 
             </div>
 

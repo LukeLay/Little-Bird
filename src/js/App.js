@@ -45,12 +45,16 @@ export default function App() {
 
                             <NavBar />
 
+                            <div style={{marginTop: "128px"}}>
+
                             <Switch>
                                 <Route exact path="/" component={Home}/>
                                 <Route exact path="/Dice" component={Dice}/>
                                 <Route exact path="/Monsters" component={Monsters}/> 
                                 <Route path="/Monsters/:monsterName" component={MonsterDetail} />                               
                             </Switch>  
+
+                            </div>
 
                         </div>
 

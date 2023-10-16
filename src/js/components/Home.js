@@ -7,10 +7,9 @@ import toast, { Toaster } from 'react-hot-toast';
 const Home = () => {    
 
     return (
-        <>
-                  Home  
+        <> 
             <div className="" style={{display: "flex", flexDirection: "column", padding: "16px"}}>
-                
+                :)
             </div>
 
         </>

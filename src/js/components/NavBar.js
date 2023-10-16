@@ -25,7 +25,17 @@ const NavBar = () => {
     return ( 
         <>
 
-            <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" style={{padding: "4px", height: "96px", border: "2px solid var(--bs-primary)", borderRadius: "16px", margin: "8px"}}>
+            <nav className="navbar navbar-expand-lg bg-dark" data-bs-theme="dark" style={{
+                padding: "4px",
+                border: "2px solid var(--bs-primary)",
+                borderRadius: "16px",
+                margin: "8px",
+                position: "fixed", // Fix the navigation bar at the top
+                top: "0", // Stick it to the top
+                width: "100%", // Occupy full width
+                zIndex: "999", // Ensure it's on top of other content
+                background: "rgba(0, 0, 0, 0.7)", // Apply a transparent background
+            }}>
 
                 <div className="container-fluid" >
 

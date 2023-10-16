@@ -101,6 +101,11 @@ const Monsters = () => {
 
   return (
     <>
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+          <li className="breadcrumb-item active">Monsters</li>
+        </ol>
+
         <div className="form-group" style={{display: "flex", justifyContent: "flex-end"}}>
             <input className="form-control" style={{margin: "8px", width: "33%"}} type="text" placeholder="Search monster names..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
         </div>
