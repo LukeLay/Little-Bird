@@ -63,6 +63,40 @@ const Monsters = () => {
     );
     setFilteredMonsters(filtered);
   }, [searchQuery, monsters]);
+
+  const getNameColor = (cr) => {
+      
+    if (cr < 5) {
+      return "var(--bs-white)";
+    } 
+    else if (cr < 10) {
+      return "var(--bs-green)";
+    }
+    else if (cr < 15) {
+      return "var(--bs-blue)";
+    }
+    else if (cr < 20) {
+      return "var(--bs-purple)";
+    }
+    else if (cr < 30) {
+      return "var(--bs-orange)";
+    }
+    else {
+      return "var(--bs-red)";
+    }
+  };
+
+  const cellStyle = {
+    fontSize: "1.2rem",
+    color: "var(--bs-light)"
+  };
+
+  const headerStyle = {
+    cursor: "pointer",
+    fontSize: "1.2rem",
+    color: "var(--bs-light)",
+    fontWeight: "bold"
+  };
   
 
   return (
@@ -74,37 +108,37 @@ const Monsters = () => {
         <table className="table table-hover">
             <thead className="table-primary">
                 <tr>
-                    <th>Rank</th>
-                    <th onClick={() => handleColumnHeaderClick("name")}>Name</th>
-                    <th onClick={() => handleColumnHeaderClick("challenge_rating")}>Challenge Rating</th>     
-                    <th onClick={() => handleColumnHeaderClick("type")}>Type</th>     
-                    <th onClick={() => handleColumnHeaderClick("armor_class")}>Armor Class</th>
-                    <th onClick={() => handleColumnHeaderClick("hit_points")}>Hit Points</th>
-                    <th onClick={() => handleColumnHeaderClick("constitution")}>Constitution</th>
-                    <th onClick={() => handleColumnHeaderClick("strength")}>Strength</th>
-                    <th onClick={() => handleColumnHeaderClick("dexterity")}>Dexterity</th>
-                    <th onClick={() => handleColumnHeaderClick("intelligence")}>Intelligence</th>
-                    <th onClick={() => handleColumnHeaderClick("wisdom")}>Wisdom</th>
-                    <th onClick={() => handleColumnHeaderClick("charisma")}>Charisma</th>
+                    <th style={{headerStyle}}></th>
+                    <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("name")}>Name</th>
+                    <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("challenge_rating")}>Challenge Rating</th>     
+                    <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("type")}>Type</th>     
+                    <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("armor_class")}>Armor Class</th>
+                    <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("hit_points")}>Hit Points</th>                    
+                    <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("strength")}>STR</th>
+                    <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("constitution")}>CON</th>
+                    <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("dexterity")}>DEX</th>
+                    <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("intelligence")}>INT</th>
+                    <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("wisdom")}>WIS</th>
+                    <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("charisma")}>CHA</th>
                 </tr>
             </thead>
 
             <tbody>
             {(searchQuery === '' ? monsters : filteredMonsters).map((monster, index) => (
-                <tr key={index} className={index % 2 === 0 ? "table-dark" : "table-secondary"}>    
-                    <td>{index + 1}</td>
-                    <td><Link to={`/Monsters/${monster.index}`}>{monster.name}</Link></td>
-                    <td>{monster.challenge_rating}</td>
-                    <td>{monster.type}</td>
-                    <td>{monster.armor_class[0].value}</td>
-                    <td>{monster.hit_points}</td>
-                    <td>{monster.constitution}</td>
-                    <td>{monster.strength}</td>
-                    <td>{monster.dexterity}</td>
-                    <td>{monster.intelligence}</td>
-                    <td>{monster.wisdom}</td>
-                    <td>{monster.charisma}</td>
-                </tr>
+              <tr key={index} className={index % 2 === 0 ? "table-active" : "table-dark"}>    
+                <td style={Object.assign({}, cellStyle, { opacity: "0.25" })}>{index + 1}</td>
+                <td style={cellStyle}><Link to={`/Monsters/${monster.index}`} style={{textDecoration: "none", fontWeight: "bold", color: getNameColor(monster["challenge_rating"])}}>{monster.name}</Link></td>
+                <td style={cellStyle}>{monster.challenge_rating}</td>
+                <td style={cellStyle}>{monster.type}</td>
+                <td style={cellStyle}>{monster.armor_class[0].value}</td>
+                <td style={cellStyle}>{monster.hit_points}</td>
+                <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.strength) })}>{monster.strength}</td>
+                <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.constitution) })}>{monster.constitution}</td>
+                <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.dexterity) })}>{monster.dexterity}</td>
+                <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.intelligence) })}>{monster.intelligence}</td>
+                <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.wisdom) })}>{monster.wisdom}</td>
+                <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.charisma) })}>{monster.charisma}</td>
+              </tr>
                 ))}
             </tbody>
         </table>
