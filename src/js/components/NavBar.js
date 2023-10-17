@@ -29,15 +29,16 @@ const NavBar = () => {
                 padding: "4px",
                 border: "2px solid var(--bs-primary)",
                 borderRadius: "16px",
-                margin: "8px",
+                margin: "1%",
                 position: "fixed", // Fix the navigation bar at the top
                 top: "0", // Stick it to the top
-                width: "100%", // Occupy full width
+                width: "98%", // Occupy full width
                 zIndex: "999", // Ensure it's on top of other content
                 background: "rgba(0, 0, 0, 0.7)", // Apply a transparent background
+                opacity: "0.95",
             }}>
 
-                <div className="container-fluid" >
+                <div className="container-fluid" style={{opacity: "95%"}} >
 
                     {/* <div onClick={() => {window.location.reload()}} className="navbar-brand" href="#"><Applogo w={84} h={84} /></div> */}
                     <Link className="navbar-brand" to="/"><Applogo w={84} h={84} /></Link>

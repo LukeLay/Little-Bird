@@ -96,21 +96,25 @@ const MonsterDetail = (props) => {
           <li className="breadcrumb-item active">{monster["index"]}</li>
         </ol>
       
-      <img
-        src={`public/img/monsters/${monster["index"]}.png`}
-        alt={`public/img/monsters/${monster["index"]}.png`}
-        style={{
-          position: "fixed",
-          top: "50%",       // Vertically center the image
-          left: "50%",      // Horizontally center the image
-          transform: "translate(-50%, -50%)", // Center it perfectly
-          zIndex: "-1",
-          opacity: "1"
-        }}
-      />
+        <img
+          src={`public/img/monsters/${monster["index"]}.png`}
+          alt={`public/img/monsters/${monster["index"]}.png`}
+          style={{
+            position: "fixed",
+            top: "50%",       // Vertically center the image
+            left: "50%",      // Horizontally center the image
+            transform: "translate(-50%, -50%)", // Center it perfectly
+            zIndex: "-1",
+            opacity: "1",
+          }}
+          onError={(e) => {
+            e.target.src = "public/img/monster-manual-cover-art.png"; // Set a placeholder image on error
+          }}
+        />
 
 
-        <div className="card text-white bg-secondary mb-3 border-primary" style={{margin: "8px", opacity: "0.95"}}>
+
+        <div className="card text-white bg-dark mb-3 border-primary" style={{margin: "8px", opacity: "0.95"}}>
 
 
 
@@ -121,35 +125,27 @@ const MonsterDetail = (props) => {
 
           <div className="card-body">
 
-          
-
-            <div>
-              <label className="form-label mt-4" style={{marginLeft: "1%"}}>Challenge Rating: {monster["challenge_rating"]}</label>
-              <div className="progress" style={{width: "98%", margin: "1%"}}>
-
-                <div className={getCRClassNames(monster["challenge_rating"])} role="progressbar" style={{width: `${(parseFloat(monster["challenge_rating"]) / 30) * 100}%`}} aria-valuenow={parseFloat(monster["challenge_rating"])} aria-valuemin="0" aria-valuemax="30">
-                </div>
-
-              </div>
-            </div>
-
             <div style={{display: "flex", flexDirection: "row"}}>
 
             <div className="card-header" style={{ width: "33.33%", border: `2px solid ${getNameColor(monster["challenge_rating"])}`, borderRadius: "16px", position: "relative" }}>
 
-              <img
-                src={`public/img/monsters/${monster["index"]}.png`}
-                alt={`public/img/monsters/${monster["index"]}.png`}
-                style={{
-                  borderRadius: "16px",
-                  maxHeight: "256px",
-                  maxWidth: "100%",  // Allow the width to adjust proportionally
-                  position: "absolute", // Position the image absolutely
-                  top: "50%", // Vertically center the image
-                  left: "50%", // Horizontally center the image
-                  transform: "translate(-50%, -50%)" // Center it perfectly
-                }}
-              />
+            <img
+              src={`public/img/monsters/${monster["index"]}.png`}
+              alt={`public/img/monsters/${monster["index"]}.png`}
+              style={{
+                borderRadius: "16px",
+                maxHeight: "256px",
+                maxWidth: "100%",  // Allow the width to adjust proportionally
+                position: "absolute", // Position the image absolutely
+                top: "50%", // Vertically center the image
+                left: "50%", // Horizontally center the image
+                transform: "translate(-50%, -50%)" // Center it perfectly
+              }}
+              onError={(e) => {
+                e.target.src = "public/img/monster-manual-cover-art.png"; // Set a placeholder image on error
+              }}
+            />
+
             </div>
 
 
@@ -211,26 +207,37 @@ const MonsterDetail = (props) => {
 
             </div>
 
+            
+            <div>
+              <label className="form-label mt-4" style={{marginLeft: "1%"}}>Challenge Rating: {monster["challenge_rating"]}</label>
+              <div className="progress" style={{width: "98%", margin: "1%", borderRadius: "16px"}}>
+
+                <div className={getCRClassNames(monster["challenge_rating"])} role="progressbar" style={{width: `${(parseFloat(monster["challenge_rating"]) / 30) * 100}%`}} aria-valuenow={parseFloat(monster["challenge_rating"])} aria-valuemin="0" aria-valuemax="30">
+                </div>
+
+              </div>
+            </div>
+
             <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
 
-              <div style={{width: "48%", margin: "1%",}} className="card border-primary mb-3">
-                <div className="card-header" style={{fontWeight: "bold"}}>Proficiencies</div> 
+              <div style={{width: "48%", margin: "1%", borderRadius: "16px"}} className="card border-primary mb-3">
+                <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Proficiencies</div> 
                 <div className="card-body">
-                  {monster["proficiencies"].map((proficiency, index) => (<div key={index}>{proficiency["proficiency"]["name"]} {proficiency["value"]}</div>))}
-                  {!(monster["proficiencies"] && monster["proficiencies"].length > 0) && (<div style={borderStyle}><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
+                  {monster["proficiencies"].map((proficiency, index) => (<div key={index}>•&nbsp;{proficiency["proficiency"]["name"]} {proficiency["value"]}</div>))}
+                  {!(monster["proficiencies"] && monster["proficiencies"].length > 0) && (<div><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
                 </div>
               </div>
 
-              <div style={{width: "48%", margin: "1%",}} className="card border-primary mb-3">
+              <div style={{width: "48%", margin: "1%", borderRadius: "16px"}} className="card border-primary mb-3">
 
-                <div className="card-header" style={{fontWeight: "bold"}}>Speed</div> 
+                <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Speed</div> 
 
                 <div className="card-body">
-                  {monster && monster["speed"]["walk"] && <div className="card-text">Walk: {monster["speed"]["walk"]}</div>}
-                  {monster && monster["speed"]["fly"] && <div className="card-text">Fly: {monster["speed"]["fly"]}</div>}
-                  {monster && monster["speed"]["swim"] && <div className="card-text">Swim: {monster["speed"]["swim"]}</div>}
-                  {monster && monster["speed"]["burrow"] && <div className="card-text">Burrow: {monster["speed"]["burrow"]}</div>}
-                  {monster && monster["speed"]["climb"] && <div className="card-text">Climb: {monster["speed"]["climb"]}</div>}
+                  {monster && monster["speed"]["walk"] && <div className="card-text">•&nbsp;Walk: {monster["speed"]["walk"]}</div>}
+                  {monster && monster["speed"]["fly"] && <div className="card-text">•&nbsp;Fly: {monster["speed"]["fly"]}</div>}
+                  {monster && monster["speed"]["swim"] && <div className="card-text">•&nbsp;Swim: {monster["speed"]["swim"]}</div>}
+                  {monster && monster["speed"]["burrow"] && <div className="card-text">•&nbsp;Burrow: {monster["speed"]["burrow"]}</div>}
+                  {monster && monster["speed"]["climb"] && <div className="card-text">•&nbsp;Climb: {monster["speed"]["climb"]}</div>}
                 </div>
 
               </div>
@@ -239,38 +246,38 @@ const MonsterDetail = (props) => {
 
             <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
 
-              <div style={{width: "48%", margin: "1%",}} className="card border-primary mb-3">
-                <div className="card-header" style={{fontWeight: "bold"}}>Senses</div> 
+              <div style={{width: "48%", margin: "1%", borderRadius: "16px"}} className="card border-primary mb-3">
+                <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Senses</div> 
                   <div className="card-body">
-                    {Object.keys(monster["senses"]).map((key, index) => (<div key={key}>{key.replace(/_/g, ' ')}: {monster["senses"][key]}</div>))}
-                    {!(monster["senses"] && Object.keys(monster["senses"]).length > 0) && (<div style={borderStyle}><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
+                    {Object.keys(monster["senses"]).map((key, index) => (<div key={key}>•&nbsp;{key.replace(/_/g, ' ')}: {monster["senses"][key]}</div>))}
+                    {!(monster["senses"] && Object.keys(monster["senses"]).length > 0) && (<div><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
                   </div>
               </div>
 
-              <div style={{width: "48%", margin: "1%",}} className="card border-primary mb-3">
-                <div className="card-header" style={{fontWeight: "bold"}}>Languages</div> 
+              <div style={{width: "48%", margin: "1%", borderRadius: "16px"}} className="card border-primary mb-3">
+                <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Languages</div> 
                   <div className="card-body">
-                    {monster["languages"] && <div style={borderStyle}>{monster["languages"]}</div>}
-                    {!(monster["languages"]) && (<div style={borderStyle}><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
+                    {monster["languages"] && <div>•&nbsp;{monster["languages"]}</div>}
+                    {!(monster["languages"]) && (<div><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
                   </div>
               </div>
 
             </div>
 
             <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
-              <div style={{width: "48%", margin: "1%",}} className="card border-primary mb-3">
-                <div className="card-header" style={{fontWeight: "bold"}}>Damage Vulnerabilities <FontAwesomeIcon icon={faAnglesDown} size="1x" color="var(--bs-danger)"/></div> 
+              <div style={{width: "48%", margin: "1%", borderRadius: "16px"}} className="card border-primary mb-3">
+                <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Damage Vulnerabilities <FontAwesomeIcon icon={faAnglesDown} size="1x" color="var(--bs-danger)"/></div> 
                 <div className="card-body">
-                  {monster["damage_vulnerabilities"].map((vulnerability, index) => (<div key={index}>{vulnerability}</div>))}
-                  {!(monster["damage_vulnerabilities"] && monster["damage_vulnerabilities"].length > 0) && (<div style={borderStyle}><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
+                  {monster["damage_vulnerabilities"].map((vulnerability, index) => (<div key={index}>•&nbsp;{vulnerability}</div>))}
+                  {!(monster["damage_vulnerabilities"] && monster["damage_vulnerabilities"].length > 0) && (<div><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
                 </div>
               </div>
 
-              <div style={{width: "48%", margin: "1%",}} className="card border-primary mb-3">
-                <div className="card-header" style={{fontWeight: "bold"}}>Damage Resistances <FontAwesomeIcon icon={faAnglesUp} size="1x" color="var(--bs-success)"/></div> 
+              <div style={{width: "48%", margin: "1%", borderRadius: "16px"}} className="card border-primary mb-3">
+                <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Damage Resistances <FontAwesomeIcon icon={faAnglesUp} size="1x" color="var(--bs-success)"/></div> 
                 <div className="card-body">
-                  {monster["damage_resistances"] && monster["damage_resistances"].length > 0 && monster["damage_resistances"].map((resistance, index) => (<div key={index}>{resistance}</div>))}
-                  {!(monster["damage_resistances"] && monster["damage_resistances"].length > 0) && (<div style={borderStyle}><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
+                  {monster["damage_resistances"] && monster["damage_resistances"].length > 0 && monster["damage_resistances"].map((resistance, index) => (<div key={index}>•&nbsp;{resistance}</div>))}
+                  {!(monster["damage_resistances"] && monster["damage_resistances"].length > 0) && (<div><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
                 </div>
               </div>
 
@@ -278,52 +285,45 @@ const MonsterDetail = (props) => {
 
             <div style={{display: "flex", flexDirection: "row", flexWrap: "wrap"}}>
 
-              <div style={{width: "48%", margin: "1%",}} className="card border-primary mb-3">
-                <div className="card-header" style={{fontWeight: "bold"}}>Damage Immunities <FontAwesomeIcon icon={faShieldHeart} size="1x" color="var(--bs-default)"/></div> 
+              <div style={{width: "48%", margin: "1%", borderRadius: "16px"}} className="card border-primary mb-3">
+                <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Damage Immunities <FontAwesomeIcon icon={faShieldHeart} size="1x" color="var(--bs-default)"/></div> 
                   <div className="card-body">
-                    {monster["damage_immunities"] && monster["damage_immunities"].length > 0 && monster["damage_immunities"].map((immunity, index) => (<div key={index}>{immunity}</div>))}
-                    {!(monster["damage_immunities"] && monster["damage_immunities"].length > 0) && (<div style={borderStyle}><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
+                    {monster["damage_immunities"] && monster["damage_immunities"].length > 0 && monster["damage_immunities"].map((immunity, index) => (<div key={index}>•&nbsp;{immunity}</div>))}
+                    {!(monster["damage_immunities"] && monster["damage_immunities"].length > 0) && (<div><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
                   </div>
               </div> 
 
-              <div style={{width: "48%", margin: "1%",}} className="card border-primary mb-3">
-                <div className="card-header" style={{fontWeight: "bold"}}>Condition Immunities <FontAwesomeIcon icon={faShieldVirus} size="1x" color="var(--bs-default)"/></div> 
+              <div style={{width: "48%", margin: "1%", borderRadius: "16px"}} className="card border-primary mb-3">
+                <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Condition Immunities <FontAwesomeIcon icon={faShieldVirus} size="1x" color="var(--bs-default)"/></div> 
                   <div className="card-body">
-                    {monster["condition_immunities"] && monster["condition_immunities"].length > 0 && monster["condition_immunities"].map((immunity, index) => (<div key={index}>{immunity["name"]}</div>))}
-                    {!(monster["condition_immunities"] && monster["condition_immunities"].length > 0) && (<div style={borderStyle}><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
+                    {monster["condition_immunities"] && monster["condition_immunities"].length > 0 && monster["condition_immunities"].map((immunity, index) => (<div key={index}>•&nbsp;{immunity["name"]}</div>))}
+                    {!(monster["condition_immunities"] && monster["condition_immunities"].length > 0) && (<div><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
                   </div>
               </div>
 
             </div>
 
-
-           
-
-            
-
-            
-
-            <div style={{width: "98%", margin: "1%"}} className="card border-primary mb-3">
-              <div className="card-header" style={{fontWeight: "bold"}}>Special Abilities</div> 
+            <div style={{width: "98%", margin: "1%", borderRadius: "16px"}} className="card border-primary mb-3">
+              <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Special Abilities</div> 
                 <div className="card-body">
-                  {monster["special_abilities"] && monster["special_abilities"].length > 0 && monster["special_abilities"].map((ability, index) => (<div key={index}><span style={{fontWeight: "bold", color: "var(--bs-warning)"}}>{ability["name"]}</span>: {ability["desc"]}</div>))}
-                  {!(monster["special_abilities"] && monster["special_abilities"].length > 0) && (<div style={borderStyle}><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
+                  {monster["special_abilities"] && monster["special_abilities"].length > 0 && monster["special_abilities"].map((ability, index) => (<div key={index}>•&nbsp;<span style={{fontWeight: "bold", color: "var(--bs-warning)"}}>{ability["name"]}</span>: {ability["desc"]}</div>))}
+                  {!(monster["special_abilities"] && monster["special_abilities"].length > 0) && (<div><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
                 </div>
             </div>
 
-            <div style={{width: "98%", margin: "1%"}} className="card border-primary mb-3">
-              <div className="card-header" style={{fontWeight: "bold"}}>Actions</div> 
+            <div style={{width: "98%", margin: "1%", borderRadius: "16px"}} className="card bg-dark border-secondary mb-3">
+              <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Actions</div> 
                 <div className="card-body">
-                  {monster["actions"] && monster["actions"].length > 0 && monster["actions"].map((action, index) => (<div key={index}><span style={{fontWeight: "bold", color: "var(--bs-warning)"}}>{action["name"]}</span>: {action["desc"]}</div>))}
-                  {!(monster["actions"] && monster["actions"].length > 0) && (<div style={borderStyle}><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
+                  {monster["actions"] && monster["actions"].length > 0 && monster["actions"].map((action, index) => (<div key={index}>•&nbsp;<span style={{fontWeight: "bold", color: "var(--bs-warning)"}}>{action["name"]}</span>: {action["desc"]}</div>))}
+                  {!(monster["actions"] && monster["actions"].length > 0) && (<div><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
                 </div>
             </div>
 
-            <div style={{width: "98%", margin: "1%"}} className="card border-primary mb-3">
-              <div className="card-header" style={{fontWeight: "bold"}}>Legendary Actions</div> 
+            <div style={{width: "98%", margin: "1%", borderRadius: "16px"}} className="card bg-dark border-secondary mb-3">
+              <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Legendary Actions</div> 
                 <div className="card-body">
-                  {monster["legendary_actions"] && monster["legendary_actions"].length > 0 && monster["legendary_actions"].map((action, index) => (<div key={index}><span style={{fontWeight: "bold", color: "var(--bs-warning)"}}>{action["name"]}</span>: {action["desc"]}</div>))}
-                  {!(monster["legendary_actions"] && monster["legendary_actions"].length > 0) && (<div style={borderStyle}><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
+                  {monster["legendary_actions"] && monster["legendary_actions"].length > 0 && monster["legendary_actions"].map((action, index) => (<div key={index}>•&nbsp;<span style={{fontWeight: "bold", color: "var(--bs-warning)"}}>{action["name"]}</span>: {action["desc"]}</div>))}
+                  {!(monster["legendary_actions"] && monster["legendary_actions"].length > 0) && (<div><span style={{opacity: "0.25"}}><i>none</i></span></div>)}
                 </div>
             </div>
 
@@ -331,7 +331,7 @@ const MonsterDetail = (props) => {
         </div>
       </>
       ) : (
-      <div style={borderStyle}>Loading...</div>
+      <div>Loading...</div>
       )}
 
     </>
