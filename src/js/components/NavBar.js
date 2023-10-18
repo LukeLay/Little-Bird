@@ -10,15 +10,16 @@ import Applogo from "./AppLogo";
 
 const navButtonStyle = {
 
-    width: "84px",
+    width: "104px",
     height: "84px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    flexWrap: "nowrap",
     margin: "4px",
-
-}
+    color: "var(--bs-info)"
+};
 
 
 const NavBar = () => {
@@ -49,78 +50,78 @@ const NavBar = () => {
                         <li className="nav-item">
                             <Link className="nav-link" to="/Dice" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faDiceD20} size="2x" color=""/>
-                                <span style={{color: "var(--bs-info)"}}>Dice</span>
+                                Dice
                             </Link>
                         </li>
 
                         <li className="nav-item">
                             <Link className="nav-link" to="/Monsters" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faDragon} size="2x" color=""/>
-                                <span style={{color: "var(--bs-info)"}}>Monsters</span>
+                                Monsters
                             </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#" style={navButtonStyle}>
+                            <Link className="nav-link" to="/Classes" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faBook} size="2x" color=""/>
-                                <span style={{color: "var(--bs-info)"}}>Classes</span>
-                            </a>
+                                Classes
+                            </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#" style={navButtonStyle}>
+                            <Link className="nav-link" to="/" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faUser} size="2x" color=""/>
-                                <span style={{color: "var(--bs-info)"}}>Races</span>
-                            </a>
+                                Races
+                            </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#" style={navButtonStyle}>
+                            <Link className="nav-link" to="/" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faClockRotateLeft} size="2x" color=""/>
-                                <span style={{color: "var(--bs-info)"}}>Backgrounds</span>
-                            </a>
+                                Backgrounds
+                            </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#" style={navButtonStyle}>
+                            <Link className="nav-link" to="/" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faChartSimple} size="2x" color=""/>
-                                <span style={{color: "var(--bs-info)"}}>Abilities</span>
-                            </a>
+                                Abilities
+                            </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#" style={navButtonStyle}>
+                            <Link className="nav-link" to="/" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faMagnifyingGlass} size="2x" color=""/>
-                                <span style={{color: "var(--bs-info)"}}>Features</span>
-                            </a>
+                                Features
+                            </Link>
                         </li>
 
-                        <li className="nav-item">
-                            <a className="nav-link" href="#" style={navButtonStyle}>
+                        {/* <li className="nav-item">
+                            <Link className="nav-link" to="/" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faKitchenSet} size="2x" color=""/>
-                                <span style={{color: "var(--bs-info)"}}>Skills</span>
-                            </a>
-                        </li>
+                                Skills
+                            </Link>
+                        </li> */}
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#" style={navButtonStyle}>
+                            <Link className="nav-link" to="/" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faHatWizard} size="2x" color=""/>
-                                <span style={{color: "var(--bs-info)"}}>Spells</span>
-                            </a>
+                                Spells
+                            </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#" style={navButtonStyle}>
+                            <Link className="nav-link" to="/" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faBriefcase} size="2x" color=""/>
-                                <span style={{color: "var(--bs-info)"}}>Items</span>
-                            </a>
+                                Items
+                            </Link>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link" href="#" style={navButtonStyle}>
+                            <Link className="nav-link" to="/" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faSquareRootVariable} size="2x" color=""/>
-                                <span style={{color: "var(--bs-info)"}}>Formulas</span>
-                            </a>
+                                Formulas
+                            </Link>
                         </li>
 
                     </ul>

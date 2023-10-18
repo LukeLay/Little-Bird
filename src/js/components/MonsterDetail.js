@@ -142,7 +142,7 @@ const MonsterDetail = (props) => {
                 transform: "translate(-50%, -50%)" // Center it perfectly
               }}
               onError={(e) => {
-                e.target.src = "public/img/monster-manual-cover-art.png"; // Set a placeholder image on error
+                e.target.src = "public/img/missingno.png"; // Set a placeholder image on error
               }}
             />
 
@@ -169,7 +169,7 @@ const MonsterDetail = (props) => {
                       <td><div style={cellStyle}>{monster && monster["armor_class"][0].value}</div></td>
                       <td><div style={cellStyle}>{monster && monster["hit_points"]}</div></td>
                       <td><div style={cellStyle}>{monster && monster["hit_dice"]}</div></td>
-                      <td><div style={cellStyle}>{monster && monster["xp"]}</div></td>
+                      <td><div style={cellStyle}>{monster && monster["xp"].toString().replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, "$&,")}</div></td>
                       <td><div style={cellStyle}>{monster && monster["size"]}</div></td>
                       <td><div style={cellStyle}>{monster && monster["type"]}</div></td>
                       <td><div style={cellStyle}>{monster && monster["subtype"]}</div></td>

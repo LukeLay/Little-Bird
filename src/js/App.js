@@ -15,6 +15,8 @@ import Home from "./components/Home";
 import Dice from "./components/Dice";
 import Monsters from "./components/Monsters";
 import MonsterDetail from "./components/MonsterDetail";
+import ClassDetail from "./components/ClassDetail";
+import Classes from "./components/Classes";
 import NotFound from "./components/NotFound";
 
 export default function App() {    
@@ -50,8 +52,10 @@ export default function App() {
                             <Switch>
                                 <Route exact path="/" component={Home}/>
                                 <Route exact path="/Dice" component={Dice}/>
-                                <Route exact path="/Monsters" component={Monsters}/> 
-                                <Route path="/Monsters/:monsterName" component={MonsterDetail} />                               
+                                <Route exact path="/Monsters" component={Monsters}/>                                 
+                                <Route path="/Monsters/:monsterName" component={MonsterDetail} />    
+                                <Route exact path="/Classes" component={Classes}/>   
+                                <Route exact path="/Classes/:className" component={ClassDetail}/>                     
                             </Switch>  
 
                             </div>
