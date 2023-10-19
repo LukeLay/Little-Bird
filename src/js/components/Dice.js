@@ -6,17 +6,33 @@ import Die from "../tools/Die";
 
 const DiceGroup = (props) => {
 
+    let averageValue = (parseInt(props.sides) + 1) / 2 + 0.5;
+
     return (
         <>
-            <div className="card border-primary mb-3" style={{width: "48%", margin: "0.5%", display: "flex", flexDirection: "column", padding: "16px"}}>
-                <div className="card-header">D{props.sides}</div>
-                <div className="card-body" style={{display: "flex", flexDirection: "row", padding: "16px", justifyContent: "space-evenly"}}> 
-                    <Die sides={props.sides} />
-                    <Die sides={props.sides} />
-                    <Die sides={props.sides} />
-                    <Die sides={props.sides} />
-                    <Die sides={props.sides} />
-                    <Die sides={props.sides} />
+            <div className="card border-primary mb-3" style={{width: "48%", margin: "0.5%", display: "flex", flexDirection: "column", padding: "16px", borderRadius: "16px"}}>
+                <div className="card-header" style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>D{props.sides} <span style={{opacity: "0.25"}}>Avg Val: {averageValue}</span></div>
+                <div className="card-body" style={{display: "flex", flexDirection: "column", padding: "16px", justifyContent: "space-evenly"}}> 
+                    
+                    <div style={{display: "flex", flexDirection: "row"}}>
+                        <Die sides={props.sides} />
+                        <Die sides={props.sides} />
+                        <Die sides={props.sides} />
+                        <Die sides={props.sides} />
+                        <Die sides={props.sides} />
+                        <Die sides={props.sides} />
+                    </div>
+
+                    <div style={{display: "flex", flexDirection: "row"}}>
+                        <Die sides={props.sides} />
+                        <Die sides={props.sides} />
+                        <Die sides={props.sides} />
+                        <Die sides={props.sides} />
+                        <Die sides={props.sides} />
+                        <Die sides={props.sides} />
+                    </div>
+                    
+
                 </div>
             </div>
         </>

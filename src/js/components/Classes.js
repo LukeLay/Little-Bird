@@ -55,11 +55,11 @@ const Classes = () => {
             <table className="table table-hover" style={{ width: "100%" }}>
                 <thead className="table-primary">
                     <tr>
-                    {/* <th style={headerStyle}></th> */}
-                    <th style={headerStyle}>Name</th>
-                    <th style={headerStyle}>Hit Die</th>
-                    <th style={headerStyle}>Saving Throws</th>
-                    <th style={{ ...headerStyle, width: "50%" }}>Proficiencies</th>
+                        {/* <th style={headerStyle}></th> */}
+                        <th style={headerStyle}>Name</th>
+                        <th style={headerStyle}>Hit Die</th>
+                        <th style={headerStyle}>Saving Throws</th>
+                        <th style={{ ...headerStyle, width: "50%" }}>Proficiencies</th>
                     
                     </tr>
                 </thead>
