@@ -9,6 +9,10 @@ import Fighter from "./tables/Fighter";
 import Monk from "./tables/Monk";
 import Paladin from "./tables/Paladin";
 import Ranger from "./tables/Ranger";
+import Rogue from "./tables/Rogue";
+import Sorcerer from "./tables/Sorcerer";
+import Warlock from "./tables/Warlock";
+import Wizard from "./tables/Wizard";
 
 
 const ClassDetail = (props) => {
@@ -44,6 +48,21 @@ const ClassDetail = (props) => {
         }
       }, [classIndex]);
 
+      const classComponents = {
+        "Barbarian": <Barbarian />,
+        "Bard": <Bard />,
+        "Cleric": <Cleric />,
+        "Druid": <Druid />,
+        "Fighter": <Fighter />,
+        "Monk": <Monk />,
+        "Paladin": <Paladin />,
+        "Ranger": <Ranger />,
+        "Rogue": <Rogue />,
+        "Sorcerer": <Sorcerer />,
+        "Warlock": <Warlock />,
+        "Wizard": <Wizard />
+      };
+      
       return (
         <>
           {playerClass ? (
@@ -226,18 +245,10 @@ const ClassDetail = (props) => {
                     <div style={{width: "98%", margin: "1%", borderRadius: "16px"}} className="card border-primary mb-3">
 
                       <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Class Table - {playerClass.name}</div> 
-                        <div className="card-body">
-                        
-                              {playerClass.name === "Barbarian" && <Barbarian />}
-                              {playerClass.name === "Bard" && <Bard />}
-                              {playerClass.name === "Cleric" && <Cleric />}
-                              {playerClass.name === "Druid" && <Druid />}
-                              {playerClass.name === "Fighter" && <Fighter />}
-                              {playerClass.name === "Monk" && <Monk />}
-                              {playerClass.name === "Paladin" && <Paladin />}
-                              {playerClass.name === "Ranger" && <Ranger />}
-                        
+                      <div className="card-body">
+                        {classComponents[playerClass.name] || null}
                       </div>
+
                     </div>
 
 
