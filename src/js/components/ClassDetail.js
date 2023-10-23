@@ -13,11 +13,13 @@ import Rogue from "./tables/Rogue";
 import Sorcerer from "./tables/Sorcerer";
 import Warlock from "./tables/Warlock";
 import Wizard from "./tables/Wizard";
+import ClassSpells from "./ClassSpells";
 
 
 const ClassDetail = (props) => {
 
     const [playerClass, setPlayerClass] = useState(null);
+    const [spells, setSpells] = useState(null);
 
     let classIndex = props.match.params.className;
 
@@ -40,6 +42,19 @@ const ClassDetail = (props) => {
             else {
                 console.error("Class not found:", classIndex);
             }
+    
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
+
+          fetch("public/data/5e-SRD-Spells.json")
+          .then((response) => response.json())
+          .then((data) => {
+        
+            let filteredData = data.filter(item => {return item.classes.some(classItem => classItem.index === classIndex);});
+            filteredData = filteredData.sort((a, b) => (a.level > b.level) ? 1 : -1);
+            setSpells(filteredData);
     
           })
           .catch((error) => {
@@ -226,32 +241,61 @@ const ClassDetail = (props) => {
 
                     </div>
 
-                    <div style={{width: "98%", margin: "1%", borderRadius: "16px"}} className="card border-primary mb-3">
+                    <div className="accordion" style={{margin: "8px"}} id="accordionClassTable">
+                      <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingClassTable">
+                          <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClassTable" aria-expanded="true" aria-controls="collapseClassTable">
+                            {playerClass.name} Table
+                          </button>
+                        </h2>
+                        <div id="collapseClassTable" className="accordion-collapse collapse" aria-labelledby="headingClassTable" data-bs-parent="#accordionClassTable">
+                          <div className="accordion-body">
+                          {classComponents[playerClass.name] || null}
+                          </div>
+                        </div>
+                      </div>
+                    </div>  
 
-                      <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Spellcasting</div> 
-                        <div className="card-body">
-                        
-                        {playerClass["spellcasting"] && playerClass["spellcasting"]["info"] 
-                            ? (playerClass["spellcasting"]["info"].map((info, index) => (
-                            <div key={index}>                            
-                                <span style={{ fontWeight: "bold", color: "var(--bs-warning)" }}>{info.name}</span>: {info.desc}
-                            </div>
-                            )))
-                            : <div><span style={{ opacity: "0.25" }}><i>none</i></span></div>}
-                        
+                    <div className="accordion" style={{margin: "8px"}} id="accordionSpellcasting">
+                      <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingSpellcasting">
+                          <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpellcasting" aria-expanded="true" aria-controls="collapseSpellcasting">
+                            {playerClass.name} Spellcasting
+                          </button>
+                        </h2>
+                        <div id="collapseSpellcasting" className="accordion-collapse collapse" aria-labelledby="headingSpellcasting" data-bs-parent="#accordionSpellcasting">
+                          <div className="accordion-body">
+                            {playerClass["spellcasting"] && playerClass["spellcasting"]["info"] 
+                              ? (playerClass["spellcasting"]["info"].map((info, index) => (
+                              <div key={index}>                            
+                                  <span style={{ fontWeight: "bold", color: "var(--bs-warning)" }}>{info.name}</span>: {info.desc}
+                              </div>
+                              )))
+                              : <div><span style={{ opacity: "0.25" }}><i>none</i></span></div>}
+                          </div>
+                        </div>
                       </div>
                     </div>
 
-                    <div style={{width: "98%", margin: "1%", borderRadius: "16px"}} className="card border-primary mb-3">
+                    <div className="accordion" style={{margin: "8px"}} id="accordionClassSpells">
+                      <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingClassSpells">
+                          <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClassSpells" aria-expanded="true" aria-controls="collapseClassSpells">
+                            {playerClass.name} Spells
+                          </button>
+                        </h2>
+                        <div id="collapseClassSpells" className="accordion-collapse collapse" aria-labelledby="headingClassSpells" data-bs-parent="#accordionClassSpells">
+                          <div className="accordion-body">
 
-                      <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Class Table - {playerClass.name}</div> 
-                      <div className="card-body">
-                        {classComponents[playerClass.name] || null}
+                                <ClassSpells spells={spells} />
+
+
+
+                            
+                          </div>
+                        </div>
                       </div>
-
-                    </div>
-
-
+                    </div>   
 
                 </div>
               </div>
