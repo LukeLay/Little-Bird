@@ -18,6 +18,8 @@ import MonsterDetail from "./components/MonsterDetail";
 import ClassDetail from "./components/ClassDetail";
 import Classes from "./components/Classes";
 import NotFound from "./components/NotFound";
+import Spells from "./components/Spells";
+import SpellDetail from "./components/SpellDetail";
 
 export default function App() {    
 
@@ -55,7 +57,10 @@ export default function App() {
                                 <Route exact path="/Monsters" component={Monsters}/>                                 
                                 <Route path="/Monsters/:monsterName" component={MonsterDetail} />    
                                 <Route exact path="/Classes" component={Classes}/>   
-                                <Route exact path="/Classes/:className" component={ClassDetail}/>                     
+                                <Route exact path="/Classes/:className" component={ClassDetail}/>  
+                                <Route exact path="/Spells" component={Spells}/>   
+                                <Route exact path="/Spells/:spellName" component={SpellDetail}/>
+                                <Route path="*" component={NotFound} />                
                             </Switch>  
 
                             </div>

@@ -260,7 +260,7 @@ const ClassDetail = (props) => {
                       <div className="accordion-item">
                         <h2 className="accordion-header" id="headingSpellcasting">
                           <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpellcasting" aria-expanded="true" aria-controls="collapseSpellcasting">
-                            {playerClass.name} Spellcasting
+                            {playerClass.name} Spellcasting {!playerClass["spellcasting"] && <span style={{ opacity: "0.25" }}><i>&nbsp;-&nbsp;none</i></span>}
                           </button>
                         </h2>
                         <div id="collapseSpellcasting" className="accordion-collapse collapse" aria-labelledby="headingSpellcasting" data-bs-parent="#accordionSpellcasting">
@@ -281,7 +281,7 @@ const ClassDetail = (props) => {
                       <div className="accordion-item">
                         <h2 className="accordion-header" id="headingClassSpells">
                           <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClassSpells" aria-expanded="true" aria-controls="collapseClassSpells">
-                            {playerClass.name} Spells
+                            {playerClass.name} Spells {spells.length == 0 && <span style={{ opacity: "0.25" }}><i>&nbsp;-&nbsp;none</i></span>}
                           </button>
                         </h2>
                         <div id="collapseClassSpells" className="accordion-collapse collapse" aria-labelledby="headingClassSpells" data-bs-parent="#accordionClassSpells">
@@ -289,9 +289,6 @@ const ClassDetail = (props) => {
 
                                 <ClassSpells spells={spells} />
 
-
-
-                            
                           </div>
                         </div>
                       </div>

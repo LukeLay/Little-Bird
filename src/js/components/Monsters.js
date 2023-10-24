@@ -144,21 +144,21 @@ const Monsters = () => {
               </thead>
 
               <tbody>
-              {(searchQuery === '' ? monsters : filteredMonsters).map((monster, index) => (
-                <tr key={index} className={index % 2 === 0 ? "table-active" : "table-dark"}>    
-                  <td style={Object.assign({}, cellStyle, { opacity: "0.25" })}>{index + 1}</td>
-                  <td style={cellStyle}><Link to={`/Monsters/${monster.index}`} style={{textDecoration: "none", fontWeight: "bold", color: getNameColor(monster["challenge_rating"])}}>{monster.name}</Link></td>
-                  <td style={cellStyle}>{monster.challenge_rating}</td>
-                  <td style={cellStyle}>{monster.type}</td>
-                  <td style={cellStyle}>{monster.armor_class[0].value}</td>
-                  <td style={cellStyle}>{monster.hit_points}</td>
-                  <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.strength) })}>{monster.strength}</td>
-                  <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.constitution) })}>{monster.constitution}</td>
-                  <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.dexterity) })}>{monster.dexterity}</td>
-                  <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.intelligence) })}>{monster.intelligence}</td>
-                  <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.wisdom) })}>{monster.wisdom}</td>
-                  <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.charisma) })}>{monster.charisma}</td>
-                </tr>
+                {(searchQuery === '' ? monsters : filteredMonsters).map((monster, index) => (
+                  <tr key={index} className={index % 2 === 0 ? "table-active" : "table-dark"}>    
+                    <td style={Object.assign({}, cellStyle, { opacity: "0.25" })}>{index + 1}</td>
+                    <td style={cellStyle}><Link to={`/Monsters/${monster.index}`} style={{textDecoration: "none", fontWeight: "bold", color: getNameColor(monster["challenge_rating"])}}>{monster.name}</Link></td>
+                    <td style={cellStyle}>{monster.challenge_rating}</td>
+                    <td style={cellStyle}>{monster.type}</td>
+                    <td style={cellStyle}>{monster.armor_class[0].value}</td>
+                    <td style={cellStyle}>{monster.hit_points}</td>
+                    <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.strength) })}>{monster.strength}</td>
+                    <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.constitution) })}>{monster.constitution}</td>
+                    <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.dexterity) })}>{monster.dexterity}</td>
+                    <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.intelligence) })}>{monster.intelligence}</td>
+                    <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.wisdom) })}>{monster.wisdom}</td>
+                    <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.charisma) })}>{monster.charisma}</td>
+                  </tr>
                   ))}
               </tbody>
           </table>

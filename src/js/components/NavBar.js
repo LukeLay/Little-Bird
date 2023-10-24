@@ -69,6 +69,13 @@ const NavBar = () => {
                         </li>
 
                         <li className="nav-item navButton">
+                            <Link className="nav-link" to="/Spells" style={navButtonStyle}>
+                                <FontAwesomeIcon icon={faHatWizard} size="2x" color=""/>
+                                Spells
+                            </Link>
+                        </li>
+
+                        <li className="nav-item navButton">
                             <Link className="nav-link" to="/" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faUser} size="2x" color=""/>
                                 Races
@@ -102,13 +109,6 @@ const NavBar = () => {
                                 Skills
                             </Link>
                         </li> */}
-
-                        <li className="nav-item navButton">
-                            <Link className="nav-link" to="/" style={navButtonStyle}>
-                                <FontAwesomeIcon icon={faHatWizard} size="2x" color=""/>
-                                Spells
-                            </Link>
-                        </li>
 
                         <li className="nav-item navButton">
                             <Link className="nav-link" to="/" style={navButtonStyle}>
