@@ -109,7 +109,7 @@ const Spells = () => {
 
                             <tbody>
                                 {spells.map((spell, index) => (
-                                <tr key={index} className={index % 2 === 0 ? "table-active" : "table-dark"}>
+                                <tr key={index} title={spell["desc"]} className={index % 2 === 0 ? "table-active" : "table-dark"}>
 
                                     <td style={cellStyle}>
                                         {index + 1}

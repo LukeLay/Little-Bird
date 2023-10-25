@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { Link, withRouter } from 'react-router-dom';
 
 
 const ClassSpells = (props) => {
@@ -62,7 +62,14 @@ const ClassSpells = (props) => {
                         {spells.map((spell, index) => (                        
                             <tr key={index} title={spell["desc"]}>
                                 <td style={cellStyle}>{index + 1}</td>
-                                <td style={cellStyle}>{spell["name"]}</td>
+                                {/* <td style={cellStyle}>{spell["name"]}</td> */}
+
+                                <td style={cellStyle}>
+                                    <Link to={`/Spells/${spell.index}`} style={{ textDecoration: "none", fontWeight: "bold" }}>
+                                        {spell.name}
+                                    </Link>
+                                </td>
+                                
                                 <td style={cellStyle}>{spell["school"]["name"]}</td>
                                 <td style={cellStyle}>{spell["ritual"] ? "Yes" : "No"}</td>
                                 <td style={cellStyle}>{spell["concentration"] ? "Yes" : "No"}</td>
