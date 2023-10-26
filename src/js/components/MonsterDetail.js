@@ -88,7 +88,6 @@ const MonsterDetail = (props) => {
 
       {monster ? (
       <>
-
       
         <ol className="breadcrumb">
           <li className="breadcrumb-item"><Link to="/">Home</Link></li>

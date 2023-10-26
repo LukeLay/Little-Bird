@@ -20,6 +20,7 @@ import Classes from "./components/Classes";
 import NotFound from "./components/NotFound";
 import Spells from "./components/Spells";
 import SpellDetail from "./components/SpellDetail";
+import Reference from "./components/Reference";
 
 export default function App() {    
 
@@ -60,6 +61,7 @@ export default function App() {
                                 <Route exact path="/Classes/:className" component={ClassDetail}/>  
                                 <Route exact path="/Spells" component={Spells}/>   
                                 <Route exact path="/Spells/:spellName" component={SpellDetail}/>
+                                <Route exact path="/Reference" component={Reference} />
                                 <Route path="*" component={NotFound} />                
                             </Switch>  
 

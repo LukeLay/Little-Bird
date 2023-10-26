@@ -118,9 +118,9 @@ const NavBar = () => {
                         </li>
 
                         <li className="nav-item navButton">
-                            <Link className="nav-link" to="/" style={navButtonStyle}>
+                            <Link className="nav-link" to="/Reference" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faSquareRootVariable} size="2x" color=""/>
-                                Formulas
+                                Reference
                             </Link>
                         </li>
 
