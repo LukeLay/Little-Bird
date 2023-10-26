@@ -7,6 +7,9 @@ const Spells = () => {
     const [sortOrder, setSortOrder] = useState("asc");
     const [spells, setSpells] = useState([]);
 
+    const [searchQuery, setSearchQuery] = useState('');
+    const [filteredSpells, setFilteredSpells] = useState([]);
+
     useEffect(() => {
         // Fetch data from JSON file
         fetch("public/data/5e-SRD-Spells.json")
@@ -47,6 +50,13 @@ const Spells = () => {
     
         setSpells(sortedSpells);
       }, [sortColumn, sortOrder]);
+
+      useEffect(() => {
+        const filtered = spells.filter((spell) =>
+          spell.name.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+        setFilteredSpells(filtered);
+      }, [searchQuery, spells]);
     
       const handleColumnHeaderClick = (column) => {
         if (column === sortColumn) {
@@ -69,6 +79,28 @@ const Spells = () => {
         fontSize: "1.2rem",
         color: "var(--bs-white)",
         fontWeight: "bold"
+      };
+
+      const getNameColor = (lvl) => {
+      
+        if (lvl == 0) {
+          return "var(--bs-white)";
+        } 
+        else if (lvl < 3) {
+          return "var(--bs-green)";
+        }
+        else if (lvl < 5) {
+          return "var(--bs-blue)";
+        }
+        else if (lvl < 7) {
+          return "var(--bs-purple)";
+        }
+        else if (lvl < 9) {
+          return "var(--bs-orange)";
+        }
+        else {
+          return "var(--bs-red)";
+        }
       };
 
     return ( 
@@ -96,6 +128,10 @@ const Spells = () => {
 
                     <div style={{padding: "1%", opacity: "0.95"}}>
 
+                    <div className="form-group" style={{display: "flex", justifyContent: "flex-start"}}>
+                      <input className="form-control" style={{width: "33%", marginBottom: "1%"}} type="text" placeholder="Search spells..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+                  </div>
+
                         <table className="table table-hover" style={{ width: "100%" }}>
                             <thead className="table-primary">
                                 <tr>
@@ -108,7 +144,7 @@ const Spells = () => {
                             </thead>
 
                             <tbody>
-                                {spells.map((spell, index) => (
+                              {(searchQuery === '' ? spells : filteredSpells).map((spell, index) => (                                
                                 <tr key={index} title={spell["desc"]} className={index % 2 === 0 ? "table-active" : "table-dark"}>
 
                                     <td style={cellStyle}>
@@ -116,7 +152,7 @@ const Spells = () => {
                                     </td>
 
                                     <td style={cellStyle}>
-                                        <Link to={`/Spells/${spell.index}`} style={{ textDecoration: "none", fontWeight: "bold" }}>
+                                        <Link to={`/Spells/${spell.index}`} style={{ textDecoration: "none", fontWeight: "bold", color: getNameColor(spell["level"]) }}>
                                             {spell.name}
                                         </Link>
                                     </td>    

@@ -3,6 +3,7 @@ import {useState, useEffect} from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 import Die from "../tools/Die";
+import MultiDice from "../tools/MultiDice";
 
 const DiceGroup = (props) => {
 
@@ -10,28 +11,19 @@ const DiceGroup = (props) => {
 
     return (
         <>
-            <div className="card border-primary mb-3" style={{width: "48%", margin: "0.5%", display: "flex", flexDirection: "column", padding: "16px", borderRadius: "16px"}}>
+            <div className="card border-primary mb-3" style={{width: "48%", margin: "1%", display: "flex", flexDirection: "column", padding: "16px", borderRadius: "16px"}}>
                 <div className="card-header" style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>D{props.sides} <span style={{opacity: "0.25"}}>Avg Val: {averageValue}</span></div>
                 <div className="card-body" style={{display: "flex", flexDirection: "column", padding: "16px", justifyContent: "space-evenly"}}> 
                     
-                    <div style={{display: "flex", flexDirection: "row"}}>
+                    <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
                         <Die sides={props.sides} />
                         <Die sides={props.sides} />
                         <Die sides={props.sides} />
                         <Die sides={props.sides} />
                         <Die sides={props.sides} />
                         <Die sides={props.sides} />
-                    </div>
 
-                    <div style={{display: "flex", flexDirection: "row"}}>
-                        <Die sides={props.sides} />
-                        <Die sides={props.sides} />
-                        <Die sides={props.sides} />
-                        <Die sides={props.sides} />
-                        <Die sides={props.sides} />
-                        <Die sides={props.sides} />
-                    </div>
-                    
+                    </div>                   
 
                 </div>
             </div>
@@ -58,7 +50,9 @@ const Dice = () => {
 
             <div style={{padding: "1%", opacity: "0.95"}}>
 
-                <button className="btn btn-primary" onClick={() => {window.location.reload()}} style={{height: "36px", width: "auto", margin: "1%"}}>Clear All</button>
+                <button className="btn btn-danger" onClick={() => {window.location.reload()}} style={{height: "36px", width: "auto", margin: "1%"}}>Reset</button>
+
+                <MultiDice />
 
                 <div style={{display: "flex", flexDirection: "row"}}> 
                     <DiceGroup sides="20" />

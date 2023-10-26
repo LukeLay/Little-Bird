@@ -145,7 +145,7 @@ const ClassDetail = (props) => {
                       </div>
 
                       <div style={{width: "10%", margin: "1%", borderRadius: "16px"}} className="card border-primary mb-3">
-                          <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Hit<br />Die</div> 
+                          <div className="card-header" style={{fontWeight: "bold", borderRadius: "16px 16px 0px 0px"}}>Hit Die</div> 
                           <div className="card-body" style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
                           
                           <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>

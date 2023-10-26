@@ -46,6 +46,13 @@ const Monsters = () => {
     setMonsters(sortedMonsters);
   }, [sortColumn, sortOrder]);
 
+  useEffect(() => {
+    const filtered = monsters.filter((monster) =>
+      monster.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    setFilteredMonsters(filtered);
+  }, [searchQuery, monsters]);
+
   const handleColumnHeaderClick = (column) => {
     if (column === sortColumn) {
       // Toggle sorting order if the same column is clicked again
@@ -56,13 +63,6 @@ const Monsters = () => {
       setSortOrder("asc"); // Default to ascending order
     }
   };
-
-  useEffect(() => {
-    const filtered = monsters.filter((monster) =>
-      monster.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-    setFilteredMonsters(filtered);
-  }, [searchQuery, monsters]);
 
   const getNameColor = (cr) => {
       
