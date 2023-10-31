@@ -11,16 +11,18 @@ import Applogo from "./components/AppLogo";
 
 import "../style/style.css";
 import NavBar from "./components/NavBar";
-import Home from "./components/Home";
-import Dice from "./components/Dice";
-import Monsters from "./components/Monsters";
-import MonsterDetail from "./components/MonsterDetail";
-import ClassDetail from "./components/ClassDetail";
-import Classes from "./components/Classes";
+import Home from "./pages/Home";
+import Dice from "./pages/Dice";
+import Monsters from "./pages/Monsters";
+import MonsterDetail from "./detail/MonsterDetail";
+import ClassDetail from "./detail/ClassDetail";
+import Classes from "./pages/Classes";
 import NotFound from "./components/NotFound";
-import Spells from "./components/Spells";
-import SpellDetail from "./components/SpellDetail";
-import Reference from "./components/Reference";
+import Spells from "./pages/Spells";
+import SpellDetail from "./detail/SpellDetail";
+import Reference from "./pages/Reference";
+import Races from "./pages/Races";
+import RaceDetail from "./detail/RaceDetail";
 
 export default function App() {    
 
@@ -62,6 +64,8 @@ export default function App() {
                                 <Route exact path="/Spells" component={Spells}/>   
                                 <Route exact path="/Spells/:spellName" component={SpellDetail}/>
                                 <Route exact path="/Reference" component={Reference} />
+                                <Route exact path="/Races" component={Races} />
+                                <Route exact path="/Races/:raceName" component={RaceDetail} />
                                 <Route path="*" component={NotFound} />                
                             </Switch>  
 

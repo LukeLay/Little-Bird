@@ -18,7 +18,7 @@ const navButtonStyle = {
     alignItems: "center",
     flexWrap: "nowrap",
     margin: "4px",
-    color: "var(--bs-info)"
+    color: "var(--bs-white)"
 };
 
 
@@ -60,14 +60,7 @@ const NavBar = () => {
                                 Monsters
                             </Link>
                         </li>
-
-                        <li className="nav-item navButton">
-                            <Link className="nav-link" to="/Classes" style={navButtonStyle}>
-                                <FontAwesomeIcon icon={faBook} size="2x" color=""/>
-                                Classes
-                            </Link>
-                        </li>
-
+                        
                         <li className="nav-item navButton">
                             <Link className="nav-link" to="/Spells" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faHatWizard} size="2x" color=""/>
@@ -76,7 +69,14 @@ const NavBar = () => {
                         </li>
 
                         <li className="nav-item navButton">
-                            <Link className="nav-link" to="/" style={navButtonStyle}>
+                            <Link className="nav-link" to="/Classes" style={navButtonStyle}>
+                                <FontAwesomeIcon icon={faBook} size="2x" color=""/>
+                                Classes
+                            </Link>
+                        </li>                        
+
+                        <li className="nav-item navButton">
+                            <Link className="nav-link" to="/Races" style={navButtonStyle}>
                                 <FontAwesomeIcon icon={faUser} size="2x" color=""/>
                                 Races
                             </Link>
