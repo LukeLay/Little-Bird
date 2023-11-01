@@ -128,22 +128,22 @@ const MonsterDetail = (props) => {
 
             <div className="card-header" style={{ width: "33.33%", border: `2px solid ${getNameColor(monster["challenge_rating"])}`, borderRadius: "16px", position: "relative" }}>
 
-            <img
-              src={`public/img/monsters/${monster["index"]}.png`}
-              alt={`public/img/monsters/${monster["index"]}.png`}
-              style={{
-                borderRadius: "16px",
-                maxHeight: "256px",
-                maxWidth: "100%",  // Allow the width to adjust proportionally
-                position: "absolute", // Position the image absolutely
-                top: "50%", // Vertically center the image
-                left: "50%", // Horizontally center the image
-                transform: "translate(-50%, -50%)" // Center it perfectly
-              }}
-              onError={(e) => {
-                e.target.src = "public/img/missingno.png"; // Set a placeholder image on error
-              }}
-            />
+              <img
+                src={`public/img/monsters/${monster["index"]}.png`}
+                alt={`public/img/monsters/${monster["index"]}.png`}
+                style={{
+                  borderRadius: "16px",
+                  maxHeight: "256px",
+                  maxWidth: "100%",  // Allow the width to adjust proportionally
+                  position: "absolute", // Position the image absolutely
+                  top: "50%", // Vertically center the image
+                  left: "50%", // Horizontally center the image
+                  transform: "translate(-50%, -50%)" // Center it perfectly
+                }}
+                onError={(e) => {
+                  e.target.src = "public/img/missingno.png"; // Set a placeholder image on error
+                }}
+              />
 
             </div>
 
