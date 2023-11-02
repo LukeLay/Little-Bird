@@ -2,11 +2,14 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
+import toast, { Toaster } from 'react-hot-toast';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDiceD20, faDragon, faBook, faHatWizard, faUser, faSquareRootVariable, faBriefcase, faChartSimple, faKitchenSet, faClockRotateLeft, faMagnifyingGlass, faCircleNodes, faWandSparkles } from '@fortawesome/free-solid-svg-icons'
+import { faDiceD20, faDragon, faBook, faHatWizard, faUser, faSquareRootVariable, faBriefcase, faChartSimple, faKitchenSet, faClockRotateLeft, faMagnifyingGlass, faCircleNodes, faWandSparkles, faBurst, faStar, faUsers, faClipboardList } from '@fortawesome/free-solid-svg-icons'
 
 
 import Applogo from "./AppLogo";
+import RandomFact from "./RandomFact";
 
 const navButtonStyle = {
 
@@ -41,11 +44,18 @@ const NavBar = () => {
 
                 <div className="container-fluid" style={{ opacity: "95%" }} >
 
-                    {/* <div onClick={() => {window.location.reload()}} className="navbar-brand" href="#"><Applogo w={84} h={84} /></div> */}
-                    <Link className="navbar-brand" to="/"><Applogo w={84} h={84} /></Link>
+                <div className="navbar-brand" onClick={() => { toast(RandomFact) }}><Applogo w={84} h={84} flipped={false} animate={false}/></div> 
+                {/* <div className="navbar-brand" onClick={() => { window.location.reload() }}><Applogo w={84} h={84} /></div>               */}
 
                     <div className="collapse navbar-collapse" id="navbarColor01" style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
                         <ul className="navbar-nav me-auto" style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
+
+                            <li className="nav-item navButton">
+                                <Link className="nav-link" to="/" style={navButtonStyle}>
+                                    <FontAwesomeIcon icon={faBook} size="2x" color="" />
+                                    Rules
+                                </Link>
+                            </li>
 
                             <li className="nav-item navButton">
                                 <Link className="nav-link" to="/Dice" style={navButtonStyle}>
@@ -77,14 +87,14 @@ const NavBar = () => {
 
                             <li className="nav-item navButton">
                                 <Link className="nav-link" to="/Classes" style={navButtonStyle}>
-                                    <FontAwesomeIcon icon={faBook} size="2x" color="" />
+                                    <FontAwesomeIcon icon={faChartSimple} size="2x" color="" />
                                     Classes
                                 </Link>
                             </li>
 
                             <li className="nav-item navButton">
                                 <Link className="nav-link" to="/Races" style={navButtonStyle}>
-                                    <FontAwesomeIcon icon={faUser} size="2x" color="" />
+                                    <FontAwesomeIcon icon={faUsers} size="2x" color="" />
                                     Races
                                 </Link>
                             </li>
@@ -96,16 +106,16 @@ const NavBar = () => {
                             </Link>
                         </li> */}
 
-                            <li className="nav-item navButton">
+                            {/* <li className="nav-item navButton">
                                 <Link className="nav-link" to="/" style={navButtonStyle}>
                                     <FontAwesomeIcon icon={faChartSimple} size="2x" color="" />
                                     Abilities
                                 </Link>
-                            </li>
+                            </li> */}
 
                             <li className="nav-item navButton">
                                 <Link className="nav-link" to="/" style={navButtonStyle}>
-                                    <FontAwesomeIcon icon={faMagnifyingGlass} size="2x" color="" />
+                                    <FontAwesomeIcon icon={faStar} size="2x" color="" />
                                     Features
                                 </Link>
                             </li>
@@ -121,7 +131,7 @@ const NavBar = () => {
 
                             <li className="nav-item navButton">
                                 <Link className="nav-link" to="/Reference" style={navButtonStyle}>
-                                    <FontAwesomeIcon icon={faSquareRootVariable} size="2x" color="" />
+                                    <FontAwesomeIcon icon={faClipboardList} size="2x" color="" />
                                     Reference
                                 </Link>
                             </li>

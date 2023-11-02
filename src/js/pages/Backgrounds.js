@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import BackGroundImage from "../components/BackgroundImage";
 
 const Backgrounds = () => {
 
@@ -37,18 +38,7 @@ const Backgrounds = () => {
                 <li className="breadcrumb-item active">Backgrounds</li>
             </ol>
 
-            <img
-                src="public/img/the-shattered-obelisk-cover-art.png"
-                alt="public/img/the-shattered-obelisk-cover-art.png"
-                style={{
-                    position: "fixed",
-                    top: "50%",       // Vertically center the image
-                    left: "50%",      // Horizontally center the image
-                    transform: "translate(-50%, -50%)", // Center it perfectly
-                    zIndex: "-1",
-                    opacity: "1",
-                }}
-            />
+            <BackGroundImage image="public/img/the-shattered-obelisk-cover-art.png" />
 
             <div style={{ padding: "1%", opacity: "0.95" }}>
 

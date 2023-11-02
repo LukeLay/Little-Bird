@@ -6,8 +6,6 @@ const Barbarian = () => {
 
     useEffect(() => {
 
-
-
         fetch("public/data/5e-SRD-Levels.json")
             .then((response) => response.json())
             .then((data) => {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import BackGroundImage from "../components/BackgroundImage";
 
 const Monsters = () => {
   const [monsters, setMonsters] = useState([]);
@@ -115,20 +116,9 @@ const Monsters = () => {
         <li className="breadcrumb-item active">Monsters</li>
       </ol>
 
-      <img
-        src="public/img/monster-manual-cover-art.png"
-        alt="public/img/monster-manual-cover-art.png"
-        style={{
-          position: "fixed",
-          top: "50%",       // Vertically center the image
-          left: "50%",      // Horizontally center the image
-          transform: "translate(-50%, -50%)", // Center it perfectly
-          zIndex: "-1",
-          opacity: "1",
-        }}
-      />
+      <BackGroundImage image="public/img/monster-manual-cover-art.png" />
 
-      <div style={{ padding: "1%", opacity: "0.95" }}>
+      <div style={{ padding: "4%", opacity: "0.95" }}>
 
         <div className="form-group" style={{ display: "flex", justifyContent: "flex-start" }}>
           <input className="form-control" style={{ width: "33%", marginBottom: "1%" }} type="text" placeholder="Search monster names..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />

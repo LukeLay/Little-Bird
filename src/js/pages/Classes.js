@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import BackGroundImage from "../components/BackgroundImage";
 
 const Classes = () => {
 
@@ -37,20 +38,9 @@ const Classes = () => {
                 <li className="breadcrumb-item active">Classes</li>
             </ol>
 
-            <img
-                src="public/img/players-handbook-cover-art.png"
-                alt="public/img/players-handbook-cover-art.png"
-                style={{
-                    position: "fixed",
-                    top: "50%",       // Vertically center the image
-                    left: "50%",      // Horizontally center the image
-                    transform: "translate(-50%, -50%)", // Center it perfectly
-                    zIndex: "-1",
-                    opacity: "1",
-                }}
-            />
+            <BackGroundImage image="public/img/players-handbook-cover-art.png" />
 
-            <div style={{ padding: "1%", opacity: "0.95" }}>
+            <div style={{ padding: "4%", opacity: "0.95" }}>
 
                 <table className="table table-hover" style={{ width: "100%" }}>
                     <thead className="table-primary">

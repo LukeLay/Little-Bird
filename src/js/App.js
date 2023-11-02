@@ -26,6 +26,7 @@ import RaceDetail from "./detail/RaceDetail";
 import Backgrounds from "./pages/Backgrounds";
 import MagicItems from "./pages/MagicItems";
 import MagicItemDetail from "./detail/MagicItemDetail";
+import DebugSandbox from "./tools/DebugSandbox";
 
 export default function App() {
 
@@ -41,7 +42,25 @@ export default function App() {
 
     return (
         <>
-            <Toaster toastOptions={{ className: '', style: { padding: '16px', fontSize: '1.5rem' } }} />
+            <Toaster
+                toastOptions={{
+                    className: 'custom-toast',
+                    position: "top-center", // Set the position
+                    reverseOrder: false, // Set reverseOrder
+                    icon: <Applogo w={84} h={84} flipped={true} animate={true} />, // Use your custom component as the icon
+                    style: {
+                        padding: '8px',
+                        fontSize: '20px',
+                        backgroundColor: "var(--bs-secondary)",
+                        color: "var(--bs-light)",
+                        minWidth: '50vw',
+                        border: "2px solid var(--bs-primary)",
+                    },
+                    duration: 8000,
+                }}
+            />
+
+
 
             {launching && <StartupLogo />}
             {!launching &&
@@ -73,6 +92,9 @@ export default function App() {
 
                                     <Route exact path="/MagicItems" component={MagicItems} />
                                     <Route exact path="/MagicItems/:magicItemName" component={MagicItemDetail} />
+
+
+                                    <Route exact path="/DebugSandbox" component={DebugSandbox} />
                                     <Route path="*" component={NotFound} />
                                 </Switch>
 

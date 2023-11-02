@@ -4,6 +4,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 
 import Die from "../components/Die";
 import MultiDice from "../components/MultiDice";
+import BackGroundImage from "../components/BackgroundImage";
 
 const DiceGroup = (props) => {
 
@@ -35,20 +36,14 @@ const Dice = () => {
     return (
         <>
 
-            <img
-                src="public/img/dungeon-master-guide-cover-art.png"
-                alt="public/img/dungeon-master-guide-cover-art.png"
-                style={{
-                    position: "fixed",
-                    top: "50%",       // Vertically center the image
-                    left: "50%",      // Horizontally center the image
-                    transform: "translate(-50%, -50%)", // Center it perfectly
-                    zIndex: "-1",
-                    opacity: "1",
-                }}
-            />
+            <ol className="breadcrumb">
+                <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+                <li className="breadcrumb-item active">Dice</li>
+            </ol>
 
-            <div style={{ padding: "1%", opacity: "0.95" }}>
+            <BackGroundImage image="public/img/dungeon-master-guide-cover-art.png" />
+
+            <div style={{ padding: "4%", opacity: "0.95" }}>
 
                 <button className="btn btn-danger" onClick={() => { window.location.reload() }} style={{ height: "36px", width: "auto", margin: "1%" }}>Reset</button>
 
