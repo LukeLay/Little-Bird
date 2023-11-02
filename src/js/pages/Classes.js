@@ -8,28 +8,28 @@ const Classes = () => {
     useEffect(() => {
         // Fetch data from JSON file
         fetch("public/data/5e-SRD-Classes.json")
-          .then((response) => response.json())
-          .then((data) => {
-            setClasses(data);
-          })
-          .catch((error) => {
-            console.error("Error fetching data:", error);
-          });
-      }, []);
+            .then((response) => response.json())
+            .then((data) => {
+                setClasses(data);
+            })
+            .catch((error) => {
+                console.error("Error fetching data:", error);
+            });
+    }, []);
 
-      const cellStyle = {
+    const cellStyle = {
         fontSize: "1.2rem",
         color: "var(--bs-light)",
-      };
-    
-      const headerStyle = {
+    };
+
+    const headerStyle = {
         cursor: "pointer",
         fontSize: "1.2rem",
         color: "var(--bs-white)",
         fontWeight: "bold"
-      };
+    };
 
-    return ( 
+    return (
         <>
 
             <ol className="breadcrumb">
@@ -50,52 +50,52 @@ const Classes = () => {
                 }}
             />
 
-            <div style={{padding: "1%", opacity: "0.95"}}>
+            <div style={{ padding: "1%", opacity: "0.95" }}>
 
-            <table className="table table-hover" style={{ width: "100%" }}>
-                <thead className="table-primary">
-                    <tr>
-                        {/* <th style={headerStyle}></th> */}
-                        <th style={headerStyle}>Name</th>
-                        <th style={headerStyle}>Hit Die</th>
-                        <th style={headerStyle}>Saving Throws</th>
-                        <th style={{ ...headerStyle, width: "50%" }}>Proficiencies</th>
-                    
-                    </tr>
-                </thead>
+                <table className="table table-hover" style={{ width: "100%" }}>
+                    <thead className="table-primary">
+                        <tr>
+                            {/* <th style={headerStyle}></th> */}
+                            <th style={headerStyle}>Name</th>
+                            <th style={{ ...headerStyle, textAlign: "center" }}>Hit Die</th>
+                            <th style={{ ...headerStyle, textAlign: "center" }}>Saving Throws</th>
+                            <th style={{ ...headerStyle, width: "50%" }}>Proficiencies</th>
 
-                <tbody>
-                    {classes.map((playerclass, index) => (
-                    <tr key={index} className={index % 2 === 0 ? "table-active" : "table-dark"}>
-                        {/* <td style={cellStyle}>{index+1}</td> */}
-                        <td style={cellStyle}>
-                        <Link to={`/Classes/${playerclass.index}`} style={{ textDecoration: "none", fontWeight: "bold" }}>
-                            {playerclass.name}
-                        </Link>
-                        </td>
-                        <td style={cellStyle}>{playerclass["hit_die"]}</td>
-                        <td style={cellStyle}>
-                            {playerclass.saving_throws.map((saving_throw, index) => (
-                                <span key={index}>{index > 0 && ", "}{saving_throw.name}</span>
-                            ))}
-                        </td>
-                        <td style={{ ...cellStyle, width: "50%", wordWrap: "break-word" }}>
-                            {playerclass.proficiencies.map((proficiency, index) => (
-                                <span key={index}>{index > 0 && ", "}{proficiency.name}</span>
-                            ))}
-                        </td>
-                        
-                    </tr>
-                    ))}
-                </tbody>
-            </table>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {classes.map((playerclass, index) => (
+                            <tr key={index} className={index % 2 === 0 ? "table-active" : "table-dark"}>
+                                {/* <td style={cellStyle}>{index+1}</td> */}
+                                <td style={cellStyle}>
+                                    <Link to={`/Classes/${playerclass.index}`} style={{ textDecoration: "none", fontWeight: "bold" }}>
+                                        {playerclass.name}
+                                    </Link>
+                                </td>
+                                <td style={{ ...cellStyle, textAlign: "center" }}>D{playerclass["hit_die"]}</td>
+                                <td style={{ ...cellStyle, textAlign: "center" }}>
+                                    {playerclass.saving_throws.map((saving_throw, index) => (
+                                        <span key={index}>{index > 0 && ", "}{saving_throw.name}</span>
+                                    ))}
+                                </td>
+                                <td style={{ ...cellStyle, width: "50%", wordWrap: "break-word" }}>
+                                    {playerclass.proficiencies.map((proficiency, index) => (
+                                        <span key={index}>{index > 0 && ", "}{proficiency.name}</span>
+                                    ))}
+                                </td>
+
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
 
             </div>
 
 
-        
+
         </>
-     );
+    );
 }
- 
+
 export default Classes;

@@ -8,36 +8,36 @@ const ClassSpells = (props) => {
 
     const spellArraysByLevel = Array.from({ length: 10 }, () => []);
 
-        spells.forEach(spell => {
+    spells.forEach(spell => {
         const level = spell.level;
         spellArraysByLevel[level].push(spell);
-        });
+    });
 
-        const cantrips = spellArraysByLevel[0];
-        const level1Spells = spellArraysByLevel[1];
-        const level2Spells = spellArraysByLevel[2];
-        const level3Spells = spellArraysByLevel[3];
-        const level4Spells = spellArraysByLevel[4];
-        const level5Spells = spellArraysByLevel[5];
-        const level6Spells = spellArraysByLevel[6];
-        const level7Spells = spellArraysByLevel[7];
-        const level8Spells = spellArraysByLevel[8];
-        const level9Spells = spellArraysByLevel[9];
+    const cantrips = spellArraysByLevel[0];
+    const level1Spells = spellArraysByLevel[1];
+    const level2Spells = spellArraysByLevel[2];
+    const level3Spells = spellArraysByLevel[3];
+    const level4Spells = spellArraysByLevel[4];
+    const level5Spells = spellArraysByLevel[5];
+    const level6Spells = spellArraysByLevel[6];
+    const level7Spells = spellArraysByLevel[7];
+    const level8Spells = spellArraysByLevel[8];
+    const level9Spells = spellArraysByLevel[9];
 
 
     const cellStyle = {
         fontSize: "1.2rem",
         color: "var(--bs-light)",
-      };
-    
-      const headerStyle = {
+    };
+
+    const headerStyle = {
         cursor: "pointer",
         fontSize: "1.2rem",
         color: "var(--bs-white)",
         fontWeight: "bold",
-      };
+    };
 
-      const SpellTable = (props) => {
+    const SpellTable = (props) => {
 
         const spells = props.spells;
 
@@ -53,12 +53,12 @@ const ClassSpells = (props) => {
                             <th style={headerStyle}>Ritual</th>
                             <th style={headerStyle}>Concentration</th>
                             <th style={headerStyle}>Range</th>
-                            <th style={headerStyle}>Duration</th>                   
+                            <th style={headerStyle}>Duration</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        {spells.map((spell, index) => (                        
+                        {spells.map((spell, index) => (
                             <tr key={index} title={spell["desc"]}>
                                 <td style={cellStyle}>{index + 1}</td>
                                 {/* <td style={cellStyle}>{spell["name"]}</td> */}
@@ -68,23 +68,23 @@ const ClassSpells = (props) => {
                                         {spell.name}
                                     </Link>
                                 </td>
-                                
+
                                 <td style={cellStyle}>{spell["school"]["name"]}</td>
                                 <td style={cellStyle}>{spell["ritual"] ? "Yes" : "No"}</td>
                                 <td style={cellStyle}>{spell["concentration"] ? "Yes" : "No"}</td>
                                 <td style={cellStyle}>{spell["range"]}</td>
-                                <td style={cellStyle}>{spell["duration"]}</td>                            
-                                
-                            </tr>                        
+                                <td style={cellStyle}>{spell["duration"]}</td>
+
+                            </tr>
                         ))}
                     </tbody>
                 </table>
             </>
         );
-      }
+    }
 
-    return ( 
-       <>
+    return (
+        <>
             {spells && spells.length > 0 ? (
                 <>
                     <ul className="nav nav-pills" role="tablist">
@@ -152,13 +152,13 @@ const ClassSpells = (props) => {
                             <SpellTable spells={level9Spells} />
                         </div>
                     </div>
-                 </>
+                </>
             ) : (
                 <div><span style={{ opacity: "0.25" }}><i>none</i></span></div>
             )
-        }
-        </> 
+            }
+        </>
     );
 }
- 
+
 export default ClassSpells;

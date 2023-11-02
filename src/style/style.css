@@ -1,32 +1,37 @@
 @keyframes fadeInAndShimmer {
-    0% {
-      opacity: 0;
-      transform: scale(0.5);
-    }
-    25% {
-      opacity: 1;
-    }
-    75% {
-      transform: scale(0.75);
-    }
-    100% {
-      opacity: 0;
-      transform: scale(1.35);
-      top: 0;
-      left: 0;
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
   }
-  
-  .Applogo:hover, .navButton:hover {
-    opacity: 0.9;
-    transform: scale(1.15);
+
+  25% {
+    opacity: 1;
   }
-  
-  @keyframes flip {
-    0% {
-      transform: rotateX(0deg) rotateY(0deg);
-    }
-    100% {
-      transform: rotateX(720deg) rotateY(720deg);
-    }
+
+  75% {
+    transform: scale(0.75);
   }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.35);
+    top: 0;
+    left: 0;
+  }
+}
+
+.Applogo:hover,
+.navButton:hover {
+  opacity: 0.9;
+  transform: scale(1.15);
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  100% {
+    transform: rotateX(720deg) rotateY(720deg);
+  }
+}

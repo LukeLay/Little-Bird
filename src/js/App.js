@@ -23,28 +23,31 @@ import SpellDetail from "./detail/SpellDetail";
 import Reference from "./pages/Reference";
 import Races from "./pages/Races";
 import RaceDetail from "./detail/RaceDetail";
+import Backgrounds from "./pages/Backgrounds";
+import MagicItems from "./pages/MagicItems";
+import MagicItemDetail from "./detail/MagicItemDetail";
 
-export default function App() {    
+export default function App() {
 
     //Control the startup animation
     const [launching, setLaunching] = useState(true);
     useEffect(() => {
-      const timer = setTimeout(() => {setLaunching(false);}, 1500);
-      return () => {
-        clearTimeout(timer);
-    };
+        const timer = setTimeout(() => { setLaunching(false); }, 1500);
+        return () => {
+            clearTimeout(timer);
+        };
     }, []);
-    
+
 
     return (
         <>
-            <Toaster toastOptions={{ className: '', style: { padding: '16px', fontSize: '1.5rem' } }}/>
+            <Toaster toastOptions={{ className: '', style: { padding: '16px', fontSize: '1.5rem' } }} />
 
             {launching && <StartupLogo />}
-            {!launching && 
+            {!launching &&
                 <>
-                
-                
+
+
 
                     <HashRouter hashType="noslash">
 
@@ -52,29 +55,33 @@ export default function App() {
 
                             <NavBar />
 
-                            <div style={{marginTop: "128px"}}>
+                            <div style={{ marginTop: "128px" }}>
 
-                            <Switch>
-                                <Route exact path="/" component={Home}/>
-                                <Route exact path="/Dice" component={Dice}/>
-                                <Route exact path="/Monsters" component={Monsters}/>                                 
-                                <Route path="/Monsters/:monsterName" component={MonsterDetail} />    
-                                <Route exact path="/Classes" component={Classes}/>   
-                                <Route exact path="/Classes/:className" component={ClassDetail}/>  
-                                <Route exact path="/Spells" component={Spells}/>   
-                                <Route exact path="/Spells/:spellName" component={SpellDetail}/>
-                                <Route exact path="/Reference" component={Reference} />
-                                <Route exact path="/Races" component={Races} />
-                                <Route exact path="/Races/:raceName" component={RaceDetail} />
-                                <Route path="*" component={NotFound} />                
-                            </Switch>  
+                                <Switch>
+                                    <Route exact path="/" component={Home} />
+                                    <Route exact path="/Dice" component={Dice} />
+                                    <Route exact path="/Monsters" component={Monsters} />
+                                    <Route path="/Monsters/:monsterName" component={MonsterDetail} />
+                                    <Route exact path="/Classes" component={Classes} />
+                                    <Route exact path="/Classes/:className" component={ClassDetail} />
+                                    <Route exact path="/Spells" component={Spells} />
+                                    <Route exact path="/Spells/:spellName" component={SpellDetail} />
+                                    <Route exact path="/Reference" component={Reference} />
+                                    <Route exact path="/Races" component={Races} />
+                                    <Route exact path="/Races/:raceName" component={RaceDetail} />
+                                    <Route exact path="/Backgrounds" component={Backgrounds} />
+
+                                    <Route exact path="/MagicItems" component={MagicItems} />
+                                    <Route exact path="/MagicItems/:magicItemName" component={MagicItemDetail} />
+                                    <Route path="*" component={NotFound} />
+                                </Switch>
 
                             </div>
 
                         </div>
 
-                    </HashRouter>           
-                
+                    </HashRouter>
+
                 </>
             }
 

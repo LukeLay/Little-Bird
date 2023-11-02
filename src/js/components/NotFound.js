@@ -2,10 +2,10 @@ import React from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 const NotFound = () => {
-    
-    return (  
+
+    return (
         <>
-            <div style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", marginTop: "10%"}}>
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", marginTop: "10%" }}>
                 <h2>Sorry,</h2>
                 <p>Couldn't find that!</p>
                 <br />

@@ -30,7 +30,7 @@ const Monsters = () => {
         const armorClassA = a[sortColumn][0].value;
         const armorClassB = b[sortColumn][0].value;
         return sortOrder === "asc" ? armorClassA - armorClassB : armorClassB - armorClassA;
-      } 
+      }
       else if (sortColumn === "name" || sortColumn === "type") {
         // Handle sorting for the "name" column alphabetically
         return sortOrder === "asc"
@@ -65,10 +65,10 @@ const Monsters = () => {
   };
 
   const getNameColor = (cr) => {
-      
+
     if (cr < 5) {
       return "var(--bs-white)";
-    } 
+    }
     else if (cr < 10) {
       return "var(--bs-green)";
     }
@@ -86,6 +86,15 @@ const Monsters = () => {
     }
   };
 
+  const formatCR = (cr) => {
+
+    return (cr.toString()
+      .replace("0.125", "1/8")
+      .replace("0.25", "1/4")
+      .replace("0.5", "1/2"));
+
+  }
+
   const cellStyle = {
     fontSize: "1.2rem",
     color: "var(--bs-light)",
@@ -94,76 +103,76 @@ const Monsters = () => {
   const headerStyle = {
     cursor: "pointer",
     fontSize: "1.2rem",
-    color: "var(--bs-light)",
+    color: "var(--bs-white)",
     fontWeight: "bold"
   };
-  
+
 
   return (
     <>
-        <ol className="breadcrumb">
-          <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-          <li className="breadcrumb-item active">Monsters</li>
-        </ol>
+      <ol className="breadcrumb">
+        <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+        <li className="breadcrumb-item active">Monsters</li>
+      </ol>
 
-        <img
-          src="public/img/monster-manual-cover-art.png"
-          alt="public/img/monster-manual-cover-art.png"
-          style={{
-            position: "fixed",
-            top: "50%",       // Vertically center the image
-            left: "50%",      // Horizontally center the image
-            transform: "translate(-50%, -50%)", // Center it perfectly
-            zIndex: "-1",
-            opacity: "1",
-          }}
-        />
+      <img
+        src="public/img/monster-manual-cover-art.png"
+        alt="public/img/monster-manual-cover-art.png"
+        style={{
+          position: "fixed",
+          top: "50%",       // Vertically center the image
+          left: "50%",      // Horizontally center the image
+          transform: "translate(-50%, -50%)", // Center it perfectly
+          zIndex: "-1",
+          opacity: "1",
+        }}
+      />
 
-        <div style={{padding: "1%", opacity: "0.95"}}>
+      <div style={{ padding: "1%", opacity: "0.95" }}>
 
-          <div className="form-group" style={{display: "flex", justifyContent: "flex-start"}}>
-              <input className="form-control" style={{width: "33%", marginBottom: "1%"}} type="text" placeholder="Search monster names..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
-          </div>
-
-          <table className="table table-hover">
-              <thead className="table-primary">
-                  <tr>
-                      <th style={{headerStyle}}></th>
-                      <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("name")}>Name</th>
-                      <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("challenge_rating")}>Challenge Rating</th>     
-                      <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("type")}>Type</th>     
-                      <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("armor_class")}>Armor Class</th>
-                      <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("hit_points")}>Hit Points</th>                    
-                      <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("strength")}>STR</th>
-                      <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("constitution")}>CON</th>
-                      <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("dexterity")}>DEX</th>
-                      <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("intelligence")}>INT</th>
-                      <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("wisdom")}>WIS</th>
-                      <th style={{headerStyle}} onClick={() => handleColumnHeaderClick("charisma")}>CHA</th>
-                  </tr>
-              </thead>
-
-              <tbody>
-                {(searchQuery === '' ? monsters : filteredMonsters).map((monster, index) => (
-                  <tr key={index} className={index % 2 === 0 ? "table-active" : "table-dark"}>    
-                    <td style={Object.assign({}, cellStyle, { opacity: "0.25" })}>{index + 1}</td>
-                    <td style={cellStyle}><Link to={`/Monsters/${monster.index}`} style={{textDecoration: "none", fontWeight: "bold", color: getNameColor(monster["challenge_rating"])}}>{monster.name}</Link></td>
-                    <td style={cellStyle}>{monster.challenge_rating}</td>
-                    <td style={cellStyle}>{monster.type}</td>
-                    <td style={cellStyle}>{monster.armor_class[0].value}</td>
-                    <td style={cellStyle}>{monster.hit_points}</td>
-                    <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.strength) })}>{monster.strength}</td>
-                    <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.constitution) })}>{monster.constitution}</td>
-                    <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.dexterity) })}>{monster.dexterity}</td>
-                    <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.intelligence) })}>{monster.intelligence}</td>
-                    <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.wisdom) })}>{monster.wisdom}</td>
-                    <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.charisma) })}>{monster.charisma}</td>
-                  </tr>
-                  ))}
-              </tbody>
-          </table>
-
+        <div className="form-group" style={{ display: "flex", justifyContent: "flex-start" }}>
+          <input className="form-control" style={{ width: "33%", marginBottom: "1%" }} type="text" placeholder="Search monster names..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
         </div>
+
+        <table className="table table-hover">
+          <thead className="table-primary">
+            <tr>
+              <th style={{ headerStyle }}></th>
+              <th style={{ ...headerStyle, textAlign: "center" }} onClick={() => handleColumnHeaderClick("challenge_rating")}>CR</th>
+              <th style={headerStyle} onClick={() => handleColumnHeaderClick("name")}>Name</th>
+              <th style={headerStyle} onClick={() => handleColumnHeaderClick("type")}>Type</th>
+              <th style={headerStyle} onClick={() => handleColumnHeaderClick("armor_class")}>Armor Class</th>
+              <th style={headerStyle} onClick={() => handleColumnHeaderClick("hit_points")}>Hit Points</th>
+              <th style={headerStyle} onClick={() => handleColumnHeaderClick("strength")}>STR</th>
+              <th style={headerStyle} onClick={() => handleColumnHeaderClick("constitution")}>CON</th>
+              <th style={headerStyle} onClick={() => handleColumnHeaderClick("dexterity")}>DEX</th>
+              <th style={headerStyle} onClick={() => handleColumnHeaderClick("intelligence")}>INT</th>
+              <th style={headerStyle} onClick={() => handleColumnHeaderClick("wisdom")}>WIS</th>
+              <th style={headerStyle} onClick={() => handleColumnHeaderClick("charisma")}>CHA</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {(searchQuery === '' ? monsters : filteredMonsters).map((monster, index) => (
+              <tr key={index} className={index % 2 === 0 ? "table-active" : "table-dark"}>
+                <td style={cellStyle}><span style={{ opacity: "0.25" }}>{index + 1}</span></td>
+                <td style={{ ...cellStyle, textAlign: "center" }}>{formatCR(monster.challenge_rating)}</td>
+                <td style={cellStyle}><Link to={`/Monsters/${monster.index}`} style={{ textDecoration: "none", fontWeight: "bold", color: getNameColor(monster["challenge_rating"]) }}>{monster.name}</Link></td>
+                <td style={cellStyle}>{monster.type}</td>
+                <td style={cellStyle}>{monster.armor_class[0].value}</td>
+                <td style={cellStyle}>{monster.hit_points}</td>
+                <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.strength) })}>{monster.strength}</td>
+                <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.constitution) })}>{monster.constitution}</td>
+                <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.dexterity) })}>{monster.dexterity}</td>
+                <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.intelligence) })}>{monster.intelligence}</td>
+                <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.wisdom) })}>{monster.wisdom}</td>
+                <td style={Object.assign({}, cellStyle, { color: getNameColor(monster.charisma) })}>{monster.charisma}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+      </div>
 
     </>
   );

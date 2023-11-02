@@ -1,5 +1,5 @@
 import React from "react";
-import {useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 
 import Die from "../components/Die";
@@ -11,11 +11,11 @@ const DiceGroup = (props) => {
 
     return (
         <>
-            <div className="card border-primary mb-3" style={{width: "48%", margin: "1%", display: "flex", flexDirection: "column", padding: "16px", borderRadius: "16px"}}>
-                <div className="card-header" style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>D{props.sides} <span style={{opacity: "0.25"}}>Avg Val: {averageValue}</span></div>
-                <div className="card-body" style={{display: "flex", flexDirection: "column", padding: "16px", justifyContent: "space-evenly"}}> 
-                    
-                    <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
+            <div className="card border-primary mb-3" style={{ width: "48%", margin: "1%", display: "flex", flexDirection: "column", borderRadius: "16px" }}>
+                <div className="card-header" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between" }}>D{props.sides} <span style={{ opacity: "0.25" }}>Avg Val: {averageValue}</span></div>
+                <div className="card-body" style={{ display: "flex", flexDirection: "column", padding: "16px", justifyContent: "space-evenly" }}>
+
+                    <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
                         <Die sides={props.sides} />
                         <Die sides={props.sides} />
                         <Die sides={props.sides} />
@@ -23,7 +23,7 @@ const DiceGroup = (props) => {
                         <Die sides={props.sides} />
                         <Die sides={props.sides} />
 
-                    </div>                   
+                    </div>
 
                 </div>
             </div>
@@ -32,7 +32,7 @@ const DiceGroup = (props) => {
 }
 
 const Dice = () => {
-    return ( 
+    return (
         <>
 
             <img
@@ -48,28 +48,28 @@ const Dice = () => {
                 }}
             />
 
-            <div style={{padding: "1%", opacity: "0.95"}}>
+            <div style={{ padding: "1%", opacity: "0.95" }}>
 
-                <button className="btn btn-danger" onClick={() => {window.location.reload()}} style={{height: "36px", width: "auto", margin: "1%"}}>Reset</button>
+                <button className="btn btn-danger" onClick={() => { window.location.reload() }} style={{ height: "36px", width: "auto", margin: "1%" }}>Reset</button>
 
                 <MultiDice />
 
-                <div style={{display: "flex", flexDirection: "row"}}> 
+                <div style={{ display: "flex", flexDirection: "row" }}>
                     <DiceGroup sides="20" />
                     <DiceGroup sides="4" />
                 </div>
 
-                <div style={{display: "flex", flexDirection: "row"}}> 
+                <div style={{ display: "flex", flexDirection: "row" }}>
                     <DiceGroup sides="6" />
                     <DiceGroup sides="8" />
                 </div>
 
-                <div style={{display: "flex", flexDirection: "row"}}> 
+                <div style={{ display: "flex", flexDirection: "row" }}>
                     <DiceGroup sides="10" />
                     <DiceGroup sides="12" />
                 </div>
 
-                <div style={{display: "flex", flexDirection: "row"}}> 
+                <div style={{ display: "flex", flexDirection: "row" }}>
                     <DiceGroup sides="2" />
                     <DiceGroup sides="100" />
                 </div>
@@ -79,7 +79,7 @@ const Dice = () => {
 
         </>
 
-     );
+    );
 }
- 
+
 export default Dice;

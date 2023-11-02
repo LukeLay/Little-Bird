@@ -8,7 +8,7 @@ const Die = (props) => {
   const rollDie = () => {
     setCurrentRoll(null);
     const newRoll = Math.floor(Math.random() * parseInt(props.sides)) + 1;
-    
+
 
     // Trigger the flip animation by toggling the isFlipped state
     setIsFlipped(true);
@@ -51,39 +51,39 @@ const Die = (props) => {
         }}
       >
         <DiceLogo dice={`D${props.sides}`} w="72px" h="72px" />
-        
-          
 
-        {props.sides == 2 
-        ? (
-          <span
-            style={{
-              fontWeight: "bold",
-              fontSize: "36px",
-              position: "absolute",
-              zIndex: "1",
-              userSelect: "none",
-              color: currentRoll === 1 ? "var(--bs-blue)" : currentRoll == props.sides ? "var(--bs-orange)" : "inherit"
-            }}
-          >
-            {currentRoll !== null ? (currentRoll === 1 ? "H" : "T") : null}
-          </span>
 
-          
-        ) : (
-          <span
-          style={{
-            fontWeight: "bold",
-            fontSize: currentRoll === 1 ? "24px" : currentRoll == props.sides ? "48px" : "36px",
-            position: "absolute",
-            zIndex: "1",
-            userSelect: "none",
-            color: currentRoll === 1 ? "var(--bs-danger)" : currentRoll == props.sides ? "var(--bs-warning)" : "inherit"
-          }}
-        >{currentRoll}
-        </span>
 
-        )
+        {props.sides == 2
+          ? (
+            <span
+              style={{
+                fontWeight: "bold",
+                fontSize: "36px",
+                position: "absolute",
+                zIndex: "1",
+                userSelect: "none",
+                color: currentRoll === 1 ? "var(--bs-blue)" : currentRoll == props.sides ? "var(--bs-orange)" : "inherit"
+              }}
+            >
+              {currentRoll !== null ? (currentRoll === 1 ? "H" : "T") : null}
+            </span>
+
+
+          ) : (
+            <span
+              style={{
+                fontWeight: "bold",
+                fontSize: currentRoll === 1 ? "24px" : currentRoll == props.sides ? "48px" : "36px",
+                position: "absolute",
+                zIndex: "1",
+                userSelect: "none",
+                color: currentRoll === 1 ? "var(--bs-danger)" : currentRoll == props.sides ? "var(--bs-warning)" : "inherit"
+              }}
+            >{currentRoll}
+            </span>
+
+          )
 
         }
 
