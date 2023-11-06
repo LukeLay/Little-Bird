@@ -13,16 +13,16 @@ const ClassSpells = (props) => {
         spellArraysByLevel[level].push(spell);
     });
 
-    const cantrips = spellArraysByLevel[0];
-    const level1Spells = spellArraysByLevel[1];
-    const level2Spells = spellArraysByLevel[2];
-    const level3Spells = spellArraysByLevel[3];
-    const level4Spells = spellArraysByLevel[4];
-    const level5Spells = spellArraysByLevel[5];
-    const level6Spells = spellArraysByLevel[6];
-    const level7Spells = spellArraysByLevel[7];
-    const level8Spells = spellArraysByLevel[8];
-    const level9Spells = spellArraysByLevel[9];
+    const cantrips = spellArraysByLevel[0].sort((a, b) => a.name.localeCompare(b.name));
+    const level1Spells = spellArraysByLevel[1].sort((a, b) => a.name.localeCompare(b.name));
+    const level2Spells = spellArraysByLevel[2].sort((a, b) => a.name.localeCompare(b.name));
+    const level3Spells = spellArraysByLevel[3].sort((a, b) => a.name.localeCompare(b.name));
+    const level4Spells = spellArraysByLevel[4].sort((a, b) => a.name.localeCompare(b.name));
+    const level5Spells = spellArraysByLevel[5].sort((a, b) => a.name.localeCompare(b.name));
+    const level6Spells = spellArraysByLevel[6].sort((a, b) => a.name.localeCompare(b.name));
+    const level7Spells = spellArraysByLevel[7].sort((a, b) => a.name.localeCompare(b.name));
+    const level8Spells = spellArraysByLevel[8].sort((a, b) => a.name.localeCompare(b.name));
+    const level9Spells = spellArraysByLevel[9].sort((a, b) => a.name.localeCompare(b.name));
 
 
     const cellStyle = {
@@ -50,8 +50,8 @@ const ClassSpells = (props) => {
                             <th style={headerStyle}></th>
                             <th style={headerStyle}>Spell</th>
                             <th style={headerStyle}>School</th>
-                            <th style={headerStyle}>Ritual</th>
-                            <th style={headerStyle}>Concentration</th>
+                            <th style={{ ...headerStyle, textAlign: "center" }}>Ritual</th>
+                            <th style={{ ...headerStyle, textAlign: "center" }}>Concentration</th>
                             <th style={headerStyle}>Range</th>
                             <th style={headerStyle}>Duration</th>
                         </tr>
@@ -70,8 +70,8 @@ const ClassSpells = (props) => {
                                 </td>
 
                                 <td style={cellStyle}>{spell["school"]["name"]}</td>
-                                <td style={cellStyle}>{spell["ritual"] ? "Yes" : "No"}</td>
-                                <td style={cellStyle}>{spell["concentration"] ? "Yes" : "No"}</td>
+                                <td style={{ ...cellStyle, textAlign: "center" }}>{spell["ritual"] ? "Yes" : "No"}</td>
+                                <td style={{ ...cellStyle, textAlign: "center" }}>{spell["concentration"] ? "Yes" : "No"}</td>
                                 <td style={cellStyle}>{spell["range"]}</td>
                                 <td style={cellStyle}>{spell["duration"]}</td>
 
@@ -121,7 +121,7 @@ const ClassSpells = (props) => {
                     </ul>
 
                     <div className="tab-content">
-                        <div className="tab-pane fade active show" id="cantrips" role="tabpanel">
+                        <div className="tab-pane fade" id="cantrips" role="tabpanel">
                             <SpellTable spells={cantrips} />
                         </div>
                         <div className="tab-pane fade" id="firstLevel" role="tabpanel">

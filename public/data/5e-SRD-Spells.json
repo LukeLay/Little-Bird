@@ -1,7 +1,7 @@
 [
   {
-    "index": "acid-arrow",
-    "name": "Acid Arrow",
+    "index": "melfs-acid-arrow",
+    "name": "Melf's Acid Arrow",
     "desc": [
       "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 acid damage immediately and 2d4 acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage and no damage at the end of its next turn."
     ],
@@ -58,7 +58,10 @@
         "url": "/api/subclasses/land"
       }
     ],
-    "url": "/api/spells/acid-arrow"
+    "url": "/api/spells/acid-arrow",
+    "update": [
+      "Changed name of spell from 'Acid Arrow' to 'Melf's Acid Arrow'"
+    ]
   },
   {
     "index": "acid-splash",
@@ -296,11 +299,6 @@
         "url": "/api/classes/bard"
       },
       {
-        "index": "cleric",
-        "name": "Cleric",
-        "url": "/api/classes/cleric"
-      },
-      {
         "index": "druid",
         "name": "Druid",
         "url": "/api/classes/druid"
@@ -312,7 +310,10 @@
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/animal-friendship"
+    "url": "/api/spells/animal-friendship",
+    "update": [
+      "Removed Cleric from classes"
+    ]
   },
   {
     "index": "animal-messenger",
@@ -729,8 +730,8 @@
     "url": "/api/spells/arcane-lock"
   },
   {
-    "index": "arcane-sword",
-    "name": "Arcane Sword",
+    "index": "mordenkainens-sword",
+    "name": "Mordenkainen's Sword",
     "desc": [
       "You create a sword-shaped plane of force that hovers within range. It lasts for the duration.",
       "When the sword appears, you make a melee spell attack against a target of your choice within 5 feet of the sword. On a hit, the target takes 3d10 force damage. Until the spell ends, you can use a bonus action on each of your turns to move the sword up to 20 feet to a spot you can see and repeat this attack against the same target or a different one."
@@ -772,11 +773,14 @@
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/arcane-sword"
+    "url": "/api/spells/arcane-sword",
+    "update": [
+      "Changed name of spell from 'Arcane Sword' to 'Mordenkainen's Sword'"
+    ]
   },
   {
-    "index": "arcanists-magic-aura",
-    "name": "Arcanist's Magic Aura",
+    "index": "nystuls-magic-aura",
+    "name": "Nystul's Magic Aura",
     "desc": [
       "You place an illusion on a creature or an object you touch so that divination spells reveal false information about it. The target can be a willing creature or an object that isn't being carried or worn by another creature.",
       "When you cast the spell, choose one or both of the following effects. The effect lasts for the duration. If you cast this spell on the same creature or object every day for 30 days, placing the same effect on it each time, the illusion lasts until it is dispelled.",
@@ -810,7 +814,10 @@
         "url": "/api/subclasses/lore"
       }
     ],
-    "url": "/api/spells/arcanists-magic-aura"
+    "url": "/api/spells/arcanists-magic-aura",
+    "update": [
+      "Changed name of spell from 'Arcanist's Magic Aura' to 'Nystul's Magic Aura'"
+    ]
   },
   {
     "index": "astral-projection",
@@ -1196,8 +1203,8 @@
     "url": "/api/spells/bestow-curse"
   },
   {
-    "index": "black-tentacles",
-    "name": "Black Tentacles",
+    "index": "evards-black-tentacles",
+    "name": "Evard's Black Tentacles",
     "desc": [
       "Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in the area into difficult terrain.",
       "When a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 bludgeoning damage and be restrained by the tentacles until the spell ends. A creature that starts its turn in the area and is already restrained by the tentacles takes 3d6 bludgeoning damage.",
@@ -1247,7 +1254,10 @@
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/black-tentacles"
+    "url": "/api/spells/black-tentacles",
+    "update": [
+      "Changed name of spell from 'Black Tentacles' to 'Evard's Black Tentacles'"
+    ]
   },
   {
     "index": "blade-barrier",
@@ -5258,6 +5268,11 @@
     },
     "classes": [
       {
+        "index": "bard",
+        "name": "Bard",
+        "url": "/api/classes/bard"
+      },
+      {
         "index": "druid",
         "name": "Druid",
         "url": "/api/classes/druid"
@@ -5270,11 +5285,14 @@
         "url": "/api/subclasses/lore"
       }
     ],
-    "url": "/api/spells/faerie-fire"
+    "url": "/api/spells/faerie-fire",
+    "update": [
+    "Added 'Bard' to classes."
+    ]
   },
   {
-    "index": "faithful-hound",
-    "name": "Faithful Hound",
+    "index": "mordenkainens-faithful-hound",
+    "name": "Mordenkainen's Faithful Hound",
     "desc": [
       "You conjure a phantom watchdog in an unoccupied space that you can see within range, where it remains for the duration, until you dismiss it as an action, or until you move more than 100 feet away from it.",
       "The hound is invisible to all creatures except you and can't be harmed. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound sees invisible creatures and can see into the Ethereal Plane. It ignores illusions.",
@@ -5312,7 +5330,10 @@
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/faithful-hound"
+    "url": "/api/spells/faithful-hound",
+    "update": [
+      "Changed name of spell from 'Faithful Hound' to 'Mordenkainen's Faithful Hound'"
+    ]
   },
   {
     "index": "false-life",
@@ -5691,10 +5712,18 @@
         "index": "cleric",
         "name": "Cleric",
         "url": "/api/classes/cleric"
+      },
+      {
+        "index": "druid",
+        "name": "Druid",
+        "url": "/api/classes/druid"
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/find-the-path"
+    "url": "/api/spells/find-the-path",
+    "update": [
+      "Added 'Druid' to classes."
+    ]
   },
   {
     "index": "finger-of-death",
@@ -6221,8 +6250,8 @@
     "url": "/api/spells/flesh-to-stone"
   },
   {
-    "index": "floating-disk",
-    "name": "Floating Disk",
+    "index": "tensers-floating-disk",
+    "name": "Tenser's Floating Disk",
     "desc": [
       "This spell creates a circular, horizontal plane of force, 3 feet in diameter and 1 inch thick, that floats 3 feet above the ground in an unoccupied space of your choice that you can see within range. The disk remains for the duration, and can hold up to 500 pounds. If more weight is placed on it, the spell ends, and everything on the disk falls to the ground.",
       "The disk is immobile while you are within 20 feet of it. If you move more than 20 feet away from it, the disk follows you so that it remains within 20 feet of you. If can move across uneven terrain, up or down stairs, slopes and the like, but it can't cross an elevation change of 10 feet or more. For example, the disk can't move across a 10-foot-deep pit, nor could it leave such a pit if it was created at the bottom.",
@@ -6255,7 +6284,10 @@
         "url": "/api/subclasses/lore"
       }
     ],
-    "url": "/api/spells/floating-disk"
+    "url": "/api/spells/floating-disk",
+    "update": [
+      "Changed name of spell from 'Floating Disk' to 'Tenser's Floating Disk'"
+    ]
   },
   {
     "index": "fly",
@@ -6547,8 +6579,8 @@
     "url": "/api/spells/freedom-of-movement"
   },
   {
-    "index": "freezing-sphere",
-    "name": "Freezing Sphere",
+    "index": "otilukes-freezing-sphere",
+    "name": "Otiluke's Freezing Sphere",
     "desc": [
       "A frigid globe of cold energy streaks from your fingertips to a point of your choice within range, where it explodes in a 60-foot-radius sphere. Each creature within the area must make a constitution saving throw. On a failed save, a creature takes 10d6 cold damage. On a successful save, it takes half as much damage.",
       "If the globe strikes a body of water or a liquid that is principally water (not including water-based creatures), it freezes the liquid to a depth of 6 inches over an area 30 feet square. This ice lasts for 1 minute. Creatures that were swimming on the surface of frozen water are trapped in the ice. A trapped creature can use an action to make a Strength check against your spell save DC to break free.",
@@ -6600,7 +6632,10 @@
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/freezing-sphere"
+    "url": "/api/spells/freezing-sphere",
+    "update": [
+      "Changed name of spell from 'Freezing Sphere' to 'Otiluke's Freezing Sphere'"
+    ]
   },
   {
     "index": "gaseous-form",
@@ -7174,15 +7209,13 @@
         "index": "cleric",
         "name": "Cleric",
         "url": "/api/classes/cleric"
-      },
-      {
-        "index": "paladin",
-        "name": "Paladin",
-        "url": "/api/classes/paladin"
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/guardian-of-faith"
+    "url": "/api/spells/guardian-of-faith",
+    "update": [
+      "Removed paladin from classes."
+    ]
   },
   {
     "index": "guards-and-wards",
@@ -7898,8 +7931,8 @@
     "url": "/api/spells/heroism"
   },
   {
-    "index": "hideous-laughter",
-    "name": "Hideous Laughter",
+    "index": "tashas-hideous-laughter",
+    "name": "Tasha's Hideous Laughter",
     "desc": [
       "A creature of your choice that you can see within range perceives everything as hilariously funny and falls into fits of laughter if this spell affects it. The target must succeed on a wisdom saving throw or fall prone, becoming incapacitated and unable to stand up for the duration. A creature with an Intelligence score of 4 or less isn't affected.",
       "At the end of each of its turns, and each time it takes damage, the target can make another wisdom saving throw. The target had advantage on the saving throw if it's triggered by damage. On a success, the spell ends."
@@ -7944,7 +7977,10 @@
         "url": "/api/subclasses/lore"
       }
     ],
-    "url": "/api/spells/hideous-laughter"
+    "url": "/api/spells/hideous-laughter",
+    "update": [
+      "Changed name of spell from 'Hideous Laughter' to 'Tasha's Hideous Laughter'"
+    ]
   },
   {
     "index": "hold-monster",
@@ -8133,18 +8169,16 @@
     },
     "classes": [
       {
-        "index": "paladin",
-        "name": "Paladin",
-        "url": "/api/classes/paladin"
-      },
-      {
         "index": "ranger",
         "name": "Ranger",
         "url": "/api/classes/ranger"
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/hunters-mark"
+    "url": "/api/spells/hunters-mark",
+    "update": [
+      "Removed paladin from classes."
+    ]
   },
   {
     "index": "hypnotic-pattern",
@@ -8617,8 +8651,8 @@
     "url": "/api/spells/insect-plague"
   },
   {
-    "index": "instant-summons",
-    "name": "Instant Summons",
+    "index": "drawmijs-instant-summons",
+    "name": "Drawmij's Instant Summons",
     "desc": [
       "You touch an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an invisible mark on its surface and invisibly inscribes the name of the item on the sapphire you use as the material component. Each time you cast this spell, you must use a different sapphire.",
       "At any time thereafter, you can use your action to speak the item's name and crush the sapphire. The item instantly appears in your hand regardless of physical or planar distances, and the spell ends.",
@@ -8646,7 +8680,10 @@
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/instant-summons"
+    "url": "/api/spells/instant-summons",
+    "update": [
+      "Changed name of spell from 'Instant Summons' to 'Drawmij's Instant Summons'"
+    ]
   },
   {
     "index": "invisibility",
@@ -8707,8 +8744,8 @@
     "url": "/api/spells/invisibility"
   },
   {
-    "index": "irresistible-dance",
-    "name": "Irresistible Dance",
+    "index": "ottos-irresistible-dance",
+    "name": "Otto's Irresistible Dance",
     "desc": [
       "Choose one creature that you can see within range. The target begins a comic dance in place: shuffling, tapping its feet, and capering for the duration. Creatures that can't be charmed are immune to this spell.",
       "A dancing creature must use all its movement to dance without leaving its space and has disadvantage on dexterity saving throws and attack rolls. While the target is affected by this spell, other creatures have advantage on attack rolls against it. As an action, a dancing creature makes a wisdom saving throw to regain control of itself. On a successful save, the spell ends."
@@ -8738,7 +8775,10 @@
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/irresistible-dance"
+    "url": "/api/spells/irresistible-dance",
+    "update": [
+      "Changed name of spell from 'Irresistible Dance' to 'Otto's Irresistible Dance'"
+    ]
   },
   {
     "index": "jump",
@@ -9693,8 +9733,8 @@
     "url": "/api/spells/magic-weapon"
   },
   {
-    "index": "magnificent-mansion",
-    "name": "Magnificent Mansion",
+    "index": "mordenkainens-magnificent-mansion",
+    "name": "Mordenkainen's Magnificent Mansion",
     "desc": [
       "You conjure an extradimensional dwelling in range that lasts for the duration. You choose where its one entrance is located. The entrance shimmers faintly and is 5 feet wide and 10 feet tall. You and any creature you designate when you cast the spell can enter the extradimensional dwelling as long as the portal remains open. You can open or close the portal if you are within 30 feet of it. While closed, the portal is invisible.",
       "Beyond the portal is a magnificent foyer with numerous chambers beyond. The atmosphere is clean, fresh, and warm.",
@@ -9730,7 +9770,10 @@
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/magnificent-mansion"
+    "url": "/api/spells/magnificent-mansion",
+    "update": [
+      "Changed name of spell from 'Magnificient Mansion' to 'Mordenkainen's Magnificent Mansion'"
+    ]
   },
   {
     "index": "major-image",
@@ -11096,6 +11139,11 @@
     },
     "classes": [
       {
+        "index": "druid",
+        "name": "Druid",
+        "url": "/api/classes/druid"
+      },
+      {
         "index": "sorcerer",
         "name": "Sorcerer",
         "url": "/api/classes/sorcerer"
@@ -11112,7 +11160,10 @@
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/poison-spray"
+    "url": "/api/spells/poison-spray",
+    "update": [
+      "Added 'Druid' to classes."
+    ]
   },
   {
     "index": "polymorph",
@@ -11463,8 +11514,8 @@
     "url": "/api/spells/prismatic-wall"
   },
   {
-    "index": "private-sanctum",
-    "name": "Private Sanctum",
+    "index": "mordenkainens-private-sanctum",
+    "name": "Mordenkainen's Private Sanctum",
     "desc": [
       "You make an area within range magically secure. The area is a cube that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration or until you use an action to dismiss it.",
       "When you cast the spell, you decide what sort of security the spell provides, choosing any or all of the following properties:",
@@ -11504,7 +11555,10 @@
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/private-sanctum"
+    "url": "/api/spells/private-sanctum",
+    "update": [
+      "Changed name of spell from 'private sanctum' to 'Mordenkainen's Private Sanctum'"
+    ]
   },
   {
     "index": "produce-flame",
@@ -12134,8 +12188,8 @@
     "url": "/api/spells/remove-curse"
   },
   {
-    "index": "resilient-sphere",
-    "name": "Resilient Sphere",
+    "index": "otilukes-resilient-sphere",
+    "name": "Otiluke's Resilient Sphere",
     "desc": [
       "A sphere of shimmering force encloses a creature or object of Large size or smaller within range. An unwilling creature must make a dexterity saving throw. On a failed save, the creature is enclosed for the duration.",
       "Nothing--not physical objects, energy, or other spell effects--can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it.",
@@ -12171,7 +12225,10 @@
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/resilient-sphere"
+    "url": "/api/spells/resilient-sphere",
+    "update": [
+      "Changed name of spell from 'Resilient Sphere' to 'Otiluke's Resilient Sphere'"
+    ]
   },
   {
     "index": "resistance",
@@ -12621,8 +12678,8 @@
     "url": "/api/spells/scrying"
   },
   {
-    "index": "secret-chest",
-    "name": "Secret Chest",
+    "index": "leomunds-secret-chest",
+    "name": "Leomund's Secret Chest",
     "desc": [
       "You hide a chest, and all its contents, on the Ethereal Plane. You must touch the chest and the miniature replica that serves as a material component for the spell. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet).",
       "While the chest remains on the Ethereal Plane, you can use an action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of you. You can send the chest back to the Ethereal Plane by using an action and touching both the chest and the replica.",
@@ -12649,7 +12706,10 @@
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/secret-chest"
+    "url": "/api/spells/secret-chest",
+    "update": [
+      "Changed name of spell from 'Secret Chest' to 'Leomund's Secret Chest'"
+    ]
   },
   {
     "index": "see-invisibility",
@@ -14291,8 +14351,8 @@
     "url": "/api/spells/telekinesis"
   },
   {
-    "index": "telepathic-bond",
-    "name": "Telepathic Bond",
+    "index": "rarys-telepathic-bond",
+    "name": "Rary's Telepathic Bond",
     "desc": [
       "You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures with Intelligence scores of 2 or less aren't affected by this spell.",
       "Until the spell ends, the targets can communicate telepathically through the bond whether or not they have a common language. The communication is possible over any distance, though it can't extend to other planes of existence."
@@ -14318,7 +14378,10 @@
       }
     ],
     "subclasses": [],
-    "url": "/api/spells/telepathic-bond"
+    "url": "/api/spells/telepathic-bond",
+    "update": [
+      "Changed name of spell from 'Telepathic Bond' to 'Rary's Telepathic Bond'"
+    ]
   },
   {
     "index": "teleport",
@@ -14587,8 +14650,8 @@
     "url": "/api/spells/time-stop"
   },
   {
-    "index": "tiny-hut",
-    "name": "Tiny Hut",
+    "index": "leomunds-tiny-hut",
+    "name": "Leomund's Tiny Hut",
     "desc": [
       "A 10-foot-radius immobile dome of force springs into existence around and above you and remains stationary for the duration. The spell ends if you leave its area.",
       "Nine creatures of Medium size or smaller can fit inside the dome with you. The spell fails if its area includes a larger creature or more than nine creatures. Creatures and objects within the dome when you cast this spell can move through it freely. All other creatures and objects are barred from passing through it. Spells and other magical effects can't extend through the dome or be cast through it. The atmosphere inside the space is comfortable and dry, regardless of the weather outside.",
@@ -14630,7 +14693,10 @@
         "url": "/api/subclasses/lore"
       }
     ],
-    "url": "/api/spells/tiny-hut"
+    "url": "/api/spells/tiny-hut",
+    "update": [
+      "Changed name of spell from 'Tiny Hut' to 'Leomund's Tiny Hut'"
+    ]
   },
   {
     "index": "tongues",
@@ -15826,5 +15892,1170 @@
       }
     ],
     "url": "/api/spells/zone-of-truth"
+  },
+
+
+
+
+
+  {
+    "index": "aura-of-life",
+    "name": "Aura of Life",
+    "desc": [
+      "Life preserving energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) has resistance to necrotic damage, and its hit point maximum can't be reduced. In addition, a nonhostile, living creature regains 1 hit point when it starts its turn in the aura with 0 hit points."
+    ],
+    "range": "Self (30-foot radius)",
+    "components": ["V"],
+    "ritual": false,
+    "duration": "Up to 10 minutes",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 4,
+    "area_of_effect": {
+      "type": "sphere",
+      "size": 30
+    },
+    "school": {
+      "index": "abjuration",
+      "name": "Abjuration",
+      "url": "/api/magic-schools/abjuration"
+    },
+    "classes": [
+      {
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/api/classes/paladin"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/aura-of-life"
+  },
+  {
+    "index": "aura-of-purity",
+    "name": "Aura of Purity",
+    "desc": [
+      "Purifying energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. Each nonhostile creature in the aura (including you) can't become diseased, has resistance to poison damage, and has advantage on saving throws against effects that cause any of the following conditions: blnded, charmed, deafened, frightened, paralyzed, poisoned, and stunned."
+    ],
+    "range": "Self (30-foot radius)",
+    "components": ["V"],
+    "ritual": false,
+    "duration": "Up to 10 minutes",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 4,
+    "area_of_effect": {
+      "type": "sphere",
+      "size": 30
+    },
+    "school": {
+      "index": "abjuration",
+      "name": "Abjuration",
+      "url": "/api/magic-schools/abjuration"
+    },
+    "classes": [
+      {
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/api/classes/paladin"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/aura-of-purity"
+  },
+  {
+    "index": "aura-of-vitality",
+    "name": "Aura of Vitality",
+    "desc": [
+      "Healing energy radiates from you in an aura with a 30-foot radius. Until the spell ends, the aura moves with you, centered on you. You can use a bonus action to cause one creature in the aura (including you) to regain 2d6 hit points."
+    ],
+    "range": "Self (30-foot radius)",
+    "components": ["V"],
+    "material": "A tiny reliquary worth at least 1,000gp containing a sacred relic, such as a scrap of cloth from a saint's robe or a piece of parchment from a religious text.",
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 3,
+    "heal_at_slot_level": {
+      "3": "2d6"
+    },
+    "area_of_effect": {
+      "type": "sphere",
+      "size": 30
+    },
+    "school": {
+      "index": "evocation",
+      "name": "Evocation",
+      "url": "/api/magic-schools/evocation"
+    },
+    "classes": [
+      {
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/api/classes/paladin"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/aura-of-vitality"
+  },
+  {
+    "index": "banishing-smite",
+    "name": "Banishing Smite",
+    "desc": [
+      "The next time you hit a creature with a weapon attack before this spell ends, your weapon crackles with force, and the attack deals an extra 5d10 force damage to the target. Additionally, if this attack reduces the target to 50 hit points of fewer, you banish it. If the target is native to a different plane of existence that the one you're on, the target disappears, returning to its home plane. If the target is native to the plane you're on, the creature vanishes into a harmless demiplane. While there, the target is incapacitated. It remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied."
+    ],
+    "range": "Self",
+    "components": ["V"],
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 bonus action",
+    "level": 5,
+    "damage": {
+      "damage_type": {
+        "index": "force",
+        "name": "Force",
+        "url": "/api/damage-types/force"
+      },
+      "damage_at_slot_level": {
+        "5": "5d10"
+      }
+    },
+    "school": {
+      "index": "abjuration",
+      "name": "Abjuration",
+      "url": "/api/magic-schools/abjuration"
+    },
+    "classes": [
+      {
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/api/classes/paladin"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/banishing-smite"
+  },
+  {
+    "index": "beast-sense",
+    "name": "Beast Sense",
+    "desc": [
+      "You touch a willing beast. For the duration of the spell, you can use your action to see through the beast's eyes and hear what it hears, and continue to do so until you use your action to return to your normal senses. While perceiving through the beast's senses, you gain the benefits of any special senses possessed by that creature, though you are blinded and deafened to your own surroundings."
+    ],
+    "range": "Touch",
+    "components": ["S"],
+    "ritual": true,
+    "duration": "Up to 1 hour",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 2,
+    "school": {
+      "index": "divination",
+      "name": "Divination",
+      "url": "/api/magic-schools/divination"
+    },
+    "classes": [
+      {
+        "index": "druid",
+        "name": "Druid",
+        "url": "/api/classes/druid"
+      },
+      {
+        "index": "ranger",
+        "name": "Ranger",
+        "url": "/api/classes/ranger"
+      }
+    ],
+    "subclasses": [
+      {
+        "index": "lore",
+        "name": "Lore",
+        "url": "/api/subclasses/lore"
+      }
+    ],
+    "url": "/api/spells/beast-sense"
+  },
+  {
+    "index": "blade-ward",
+    "name": "Blade Ward",
+    "desc": [
+      "You extend your hand and trace a sigil of warding in the air. Until the end of your next turn, you have resistance against bludgeoning, piercing, and slashing damage dealt by weapon attacks."
+    ],
+    "range": "Self",
+    "components": ["V", "S"],
+    "ritual": false,
+    "duration": "1 round",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 0,
+    "school": {
+      "index": "abjuration",
+      "name": "Abjuration",
+      "url": "/api/magic-schools/enchantment"
+    },
+    "classes": [
+      {
+        "index": "bard",
+        "name": "Bard",
+        "url": "/api/classes/bard"
+      },
+      {
+        "index": "sorcerer",
+        "name": "Sorcerer",
+        "url": "/api/classes/sorcerer"
+      },
+      {
+        "index": "warlock",
+        "name": "Warlock",
+        "url": "/api/classes/warlock"
+      },
+      {
+        "index": "wizard",
+        "name": "Wizard",
+        "url": "/api/classes/wizard"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/blade-ward"
+  },
+  {
+    "index": "blinding-smite",
+    "name": "Blinding Smite",
+    "desc": [
+      "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon flares with bright light, and the attack deals an extra 3d8 radiant damage to the target. Additionally, the target must succeed on a constitution saving throw or be blinded until the spell ends."
+    ],
+    "range": "Self",
+    "components": ["V"],
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 bonus action",
+    "level": 3,
+    "damage": {
+      "damage_type": {
+        "index": "radiant",
+        "name": "Radiant",
+        "url": "/api/damage-types/radiant"
+      },
+      "damage_at_slot_level": {
+        "1": "3d8"
+      }
+    },
+    "dc": {
+      "dc_type": {
+        "index": "con",
+        "name": "CON",
+        "url": "/api/ability-scores/con"
+      },
+      "dc_success": "none"
+    },
+    "area_of_effect": {
+      "type": "sphere",
+      "size": 300
+    },
+    "school": {
+      "index": "evocation",
+      "name": "Evocation",
+      "url": "/api/magic-schools/evocation"
+    },
+    "classes": [
+      {
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/api/classes/paladin"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/blinding-smite"
+  },
+  {
+    "index": "cloud-of-daggers",
+    "name": "Cloud of Daggers",
+    "desc": [
+      "You fill the air with spinning daggers in a cube 5 feet on each side, centered on a point you choose within range. A creature takes 4d4 slashing damage when it enters the spell's area for the first time on a turn or starts its turn there. "
+    ],
+    "higher_level": [
+      "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 2d4 for each slot level above 2nd."
+    ],
+    "range": "60 feet",
+    "components": ["V", "S", "M"],
+    "material": "A sliver of glass.",
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 2,
+    "damage": {
+      "damage_type": {
+        "index": "slashing",
+        "name": "Slashing",
+        "url": "/api/damage-types/slashing"
+      },
+      "damage_at_slot_level": {
+        "2": "4d4",
+        "3": "6d4",
+        "4": "8d4",
+        "5": "10d4",
+        "6": "12d4",
+        "7": "14d4",
+        "8": "16d4",
+        "9": "18d4"
+      }
+    },
+    "area_of_effect": {
+      "type": "cube",
+      "size": 5
+    },
+    "school": {
+      "index": "conjuration",
+      "name": "Conjuration",
+      "url": "/api/magic-schools/conjuration"
+    },
+    "classes": [
+      {
+        "index": "bard",
+        "name": "Bard",
+        "url": "/api/classes/bard"
+      },
+      {
+        "index": "sorcerer",
+        "name": "Sorcerer",
+        "url": "/api/classes/sorcerer"
+      },
+      {
+        "index": "warlock",
+        "name": "Warlock",
+        "url": "/api/classes/warlock"
+      },
+      {
+        "index": "wizard",
+        "name": "Wizard",
+        "url": "/api/classes/wizard"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/cloud-of-daggers"
+  },
+  {
+    "index": "compelled-duel",
+    "name": "Compelled Duel",
+    "desc": [
+      "You attempt to compel a creature into a duel. One creature that you can see within range must make a Wisdom saving throw. On a failed save, the creature is drawn to you, compelled by your divine demand. For the duration, it has disadvantage on attack rolls against creatures other than you, and must make a Wisdom saving throw each time it attempts to move to a space that is more than 30 feet away from you; if it succeeds on this saving throw, this spell doesn't restrict the target's movement for that turn.",
+      "The spell ends if you attack any other creature, if you cast a spell that targets a hostile creature other than the target, if a creature friendly to you damages the target or casts a harmful spell on it, or if you end your turn more than 30 feet away from the target."
+    ],
+    "range": "30 feet",
+    "components": ["V"],
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 bonus action",
+    "level": 1,
+    "dc": {
+      "dc_type": {
+        "index": "wis",
+        "name": "WIS",
+        "url": "/api/ability-scores/wis"
+      },
+      "dc_success": "none"
+    },
+    "school": {
+      "index": "enchantment",
+      "name": "Enchantment",
+      "url": "/api/magic-schools/enchantment"
+    },
+    "classes": [
+      {
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/api/classes/paladin"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/compelled-duel"
+  },
+  {
+    "index": "crown-of-madness",
+    "name": "Crown of Madness",
+    "desc": [
+      "One humanoid of your choice that you can see within range must succeed on a wisdom saving throw or become charmed by you for the duration. While the target is charmed in this way, a twisted crown of jagged iron appears on its head, and a madness glows in its eyes.",
+      "The charmed target must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no creature or if none are within its reach.",
+      "On your subsequent turns, you must use your action to maintain control over the target, or the spell ends. Also, the target can make a wisdom saving throw at the end of each of its turns. On a success, the spell ends."
+    ],
+    "range": "120 feet",
+    "components": ["V", "S"],
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 2,
+    "dc": {
+      "dc_type": {
+        "index": "wis",
+        "name": "WIS",
+        "url": "/api/ability-scores/wis"
+      },
+      "dc_success": "none"
+    },
+    "school": {
+      "index": "enchantment",
+      "name": "Enchantment",
+      "url": "/api/magic-schools/enchantment"
+    },
+    "classes": [
+      {
+        "index": "bard",
+        "name": "Bard",
+        "url": "/api/classes/bard"
+      },
+      {
+        "index": "sorcerer",
+        "name": "Sorcerer",
+        "url": "/api/classes/sorcerer"
+      },
+      {
+        "index": "warlock",
+        "name": "Warlock",
+        "url": "/api/classes/warlock"
+      },
+      {
+        "index": "wizard",
+        "name": "Wizard",
+        "url": "/api/classes/wizard"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/crown-of-madness"
+  },
+  {
+    "index": "crusaders-mantle",
+    "name": "Crusader's Mantle",
+    "desc": [
+      "Holy power radiates from you in an aura with a 30-foot radius, awakening boldness in friendly creatures. Until the spell ends, the aura moves with you, centered on you. While in the aura, each nonhostile creature in the aura (including you) deals an extra 1d4 radiant damage when it hits with a weapon attack."
+    ],
+    "range": "Self",
+    "components": ["V"],
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 3,
+    "damage": {
+      "damage_type": {
+        "index": "radiant",
+        "name": "Radiant",
+        "url": "/api/damage-types/radiant"
+      },
+      "damage_at_slot_level": {
+        "1": "1d4"
+      }
+    },
+    "area_of_effect": {
+      "type": "sphere",
+      "size": 30
+    },
+    "school": {
+      "index": "evocation",
+      "name": "Evocation",
+      "url": "/api/magic-schools/evocation"
+    },
+    "classes": [
+      {
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/api/classes/paladin"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/crusaders-mantle"
+  },
+  {
+    "index": "destructive-wave",
+    "name": "Destructive Wave",
+    "desc": [
+      "You strike the ground, creating a burst of divine energy that ripples outward from you. Each creature you choose within 30 feet of you must succeed on a constitution saving throw or take 5d6 thunder damage, as well as 5d6 radiant or necrotic damage (your choice), and be knocked prone. A creature that succeeds on its saving throw takes half as much damage and isn't knocked prone."  
+    ],
+    "range": "Self (30-foot radius)",
+    "components": ["V"],
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 5,
+    "dc": {
+      "dc_type": {
+        "index": "con",
+        "name": "CON",
+        "url": "/api/ability-scores/con"
+      },
+      "dc_success": "half"
+    },
+    "damage": {
+      "damage_at_slot_level": {
+        "5": "5d6"
+      }
+    },
+    "school": {
+      "index": "evocation",
+      "name": "Evocation",
+      "url": "/api/magic-schools/evocation"
+    },
+    "classes": [
+      {
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/api/classes/paladin"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/destructive-wave"
+  },
+  {
+    "index": "dissonant-whispers",
+    "name": "Dissonant Whispers",
+    "desc": [
+      "You whisper a discordant melody that only one creature of your choice within range can hear, wracking it with terrible pain. The target must make a wisdom saving throw. On a failed save, it takes 3d6 psychic damage and must immediately use its reaction, if available, to move as far as its speed allows away from you. The creature doesn't move into obviously dangerous ground, such as a fire or a pit. On a successful save, the target takes half as much damage and doesn't have to move away. A deafened creature automatically succeeds on the save."
+    ],
+    "higher_level": [
+      "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot above 1st."
+    ],
+    "range": "60 feet",
+    "components": ["V"],
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 1,
+    "damage": {
+      "damage_type": {
+        "index": "psychic",
+        "name": "Psychic",
+        "url": "/api/damage-types/psychic"
+      },
+      "damage_at_slot_level": {
+        "2": "4d6",
+        "3": "5d6",
+        "4": "6d6",
+        "5": "7d6",
+        "6": "8d6",
+        "7": "9d6",
+        "8": "10d6",
+        "9": "11d6"
+      }
+    },
+    "school": {
+      "index": "enchantment",
+      "name": "Enchantment",
+      "url": "/api/magic-schools/enchantment"
+    },
+    "classes": [
+      {
+        "index": "bard",
+        "name": "Bard",
+        "url": "/api/classes/bard"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/dissonant-whispers"
+  },
+  {
+    "index": "elemental-weapon",
+    "name": "Elemental Weapon",
+    "desc": [
+      "A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: acid, cold, fire, lightning, or thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits."
+    ],
+    "higher_level": [
+      "When you cast this spell using a spell slot of 5th or 6th level, the bonus to attack rolls increases to +2 and the extra damage increases to 2d4.",
+      "When you use a spell slot of 7th level or higher, the bonus increases to +3 and the extra damage increases to 3d4."
+    ],
+    "range": "Touch",
+    "components": ["V", "S"],
+    "ritual": false,
+    "duration": "Up to 1 hour",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 3,
+    "damage": {
+      "damage_at_slot_level": {
+        "3": "1d4",
+        "5": "2d4",
+        "7": "3d4"
+      }
+    },
+    "school": {
+      "index": "transmutation",
+      "name": "Transmutation",
+      "url": "/api/magic-schools/transmutation"
+    },
+    "classes": [
+      {
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/api/classes/paladin"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/elemental-weapon"
+  },
+  {
+    "index": "ensnaring-strike",
+    "name": "Ensnaring Strike",
+    "desc": [
+      "The next time you hit a creature with a weapon attack before this spell ends, a writhing mass of thorny vines appears at the point of impact, and the target must succeed on a strength saving throw or be restrained by the magical vines until the spell ends. A Large or larger creature has advantage on this saving throw. If the target succeeds on the save, the vines shrivel away.",
+      "While restrained by this spell, the target takes 1d6 piercing damage at the start of each of its turns. A creature restrained by the vines or one that can touch the creature can use its action to make a Strength check against your spell save DC. On a success, the target is freed."
+    ],
+    "higher_level": [
+      "If you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d6 for each slot level above 1st."
+    ],
+    "range": "Self",
+    "components": ["V"],
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 bonus action",
+    "level": 1,
+    "damage": {
+      "damage_type": {
+        "index": "piercing",
+        "name": "Piercing",
+        "url": "/api/damage-types/piercing"
+      },
+      "damage_at_slot_level": {
+        "1": "1d6",
+        "2": "2d6",
+        "3": "3d6",
+        "4": "4d6",
+        "5": "5d6"
+      }
+    },
+    "dc": {
+      "dc_type": {
+        "index": "str",
+        "name": "STR",
+        "url": "/api/ability-scores/str"
+      },
+      "dc_success": "none"
+    },
+    "school": {
+      "index": "conjuration",
+      "name": "Conjuration",
+      "url": "/api/magic-schools/conjuration"
+    },
+    "classes": [
+      {
+        "index": "ranger",
+        "name": "Ranger",
+        "url": "/api/classes/ranger"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/hail-of-thorns"
+  },
+  {
+    "index": "feign-death",
+    "name": "Feign Death",
+    "desc": [
+      "You touch a willing creature and put it into a cataleptic state that is indistinguishable from death.",
+      "For the spell's duration, or until you use an action to touch the target and dismiss the spell, the target appears dead to all outward inspection and to spells used to determine the target's status. The target is blinded and incapacitated, and its speed drops to 0.",
+      "The target has resistance to all damage except psychic damage. If the target is diseased or poisoned when you cast the spell, or becomes diseased or poisoned while under the spell's effect, the disease and poison have no effect until the spell ends."
+    ],
+    "range": "Touch",
+    "components": ["V", "S", "M"],
+    "material": "A pinch of graveyard dirt.",
+    "ritual": true,
+    "duration": "1 hour",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 3,
+    "school": {
+      "index": "necromancy",
+      "name": "Necromancy",
+      "url": "/api/magic-schools/necromancy"
+    },
+    "classes": [
+      {
+        "index": "bard",
+        "name": "Bard",
+        "url": "/api/classes/bard"
+      },
+      {
+        "index": "cleric",
+        "name": "Cleric",
+        "url": "/api/classes/cleric"
+      },
+      {
+        "index": "druid",
+        "name": "Druid",
+        "url": "/api/classes/druid"
+      },
+      {
+        "index": "wizard",
+        "name": "Wizard",
+        "url": "/api/classes/wizard"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/feign-death"
+  },
+  {
+    "index": "friends",
+    "name": "Friends",
+    "desc": [
+      "For the duration, you have advantage on all Charisma checks directed at one creature of your choice that isn't hostile toward you. When the spell ends, the creature realizes that you used magic to influence its mood and becomes hostile toward you. A creature prone to violence might attack you. Another creature might seek retribution in other ways (at the DM's discretion), depending on the nature of your interaction with it."  
+    ],
+    "range": "Self",
+    "components": ["S", "M"],
+    "material": "A small amount of makeup applied to the face as this spell is cast",
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 0,
+    "school": {
+      "index": "enchantment",
+      "name": "Enchantment",
+      "url": "/api/magic-schools/enchantment"
+    },
+    "classes": [
+      {
+        "index": "bard",
+        "name": "Bard",
+        "url": "/api/classes/bard"
+      },
+      {
+        "index": "sorcerer",
+        "name": "Sorcerer",
+        "url": "/api/classes/sorcerer"
+      },
+      {
+        "index": "warlock",
+        "name": "Warlock",
+        "url": "/api/classes/warlock"
+      },
+      {
+        "index": "wizard",
+        "name": "Wizard",
+        "url": "/api/classes/wizard"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/friends"
+  },
+  {
+    "index": "hail-of-thorns",
+    "name": "Hail of Thorns",
+    "desc": [
+      "The next time you hit a creature with a ranged weapon attack before the spell ends, this spell creates a rain of thorns that sprouts from your ranged weapon or ammunition. In addition to the normal effect of the attack, the target of the attack and each creature within 5 feet of it must make a dexterity saving throw. A creature takes 1d10 piercing damage on a failed save, or half as much damage on a successful one."
+    ],
+    "higher_level": [
+      "If you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st (to a maximum of 6d10)."
+    ],
+    "range": "Self",
+    "components": ["V"],
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 bonus action",
+    "level": 1,
+    "damage": {
+      "damage_type": {
+        "index": "piercing",
+        "name": "Piercing",
+        "url": "/api/damage-types/piercing"
+      },
+      "damage_at_slot_level": {
+        "1": "1d10",
+        "2": "2d10",
+        "3": "3d10",
+        "4": "4d10",
+        "5": "5d10"
+      }
+    },
+    "dc": {
+      "dc_type": {
+        "index": "dex",
+        "name": "DEX",
+        "url": "/api/ability-scores/dex"
+      },
+      "dc_success": "half"
+    },
+    "school": {
+      "index": "conjuration",
+      "name": "Conjuration",
+      "url": "/api/magic-schools/conjuration"
+    },
+    "classes": [
+      {
+        "index": "ranger",
+        "name": "Ranger",
+        "url": "/api/classes/ranger"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/hail-of-thorns"
+  },
+  {
+    "index": "phantasmal-force",
+    "name": "Phantasmal Force",
+    "desc": [
+      "You craft an illusion that takes root in the mind of a creature that you can see within range. The target must make an intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration. This spell has no effect on undead or constructs.",
+      "The phantasm includes sound, temperature, and other stimuli, also evident only to the creature.",
+      "The target can use its action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends.",
+      "While a target is affected by the spell, the target treats the phantasm as if it were real. The target rationalizes any illogical outcomes from interacting with the phantasm. For example, a target attempting to walk across a phantasmal bridge that spans a chasm falls once it steps onto the bridge. If the target survives the fall, it still believes that the bridge exists and comes up with some other explanation for its fall--it was pushed, it slipped, or a strong wind might have knocked it off.",
+      "An affected target is so convinced of the phantasm's reality that it can even take damage from the illusion. A phantasm created to appear as a creature can attack the target. Similarly, a phantasm created to appear as fire, a pool of acid, or lava can burn the target. Each round on your turn, the phantasm can deal 1d6 psychic damage to the target if it is in the phantasm's area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion."
+    ],
+    "range": "60 feet",
+    "components": ["V", "S", "M"],
+    "material": "A bit of fleece.",
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 action",
+    "level": 2,
+    "dc": {
+      "dc_type": {
+        "index": "int",
+        "name": "INT",
+        "url": "/api/ability-scores/int"
+      },
+      "dc_success": "none"
+    },
+    "school": {
+      "index": "illusion",
+      "name": "Illusion",
+      "url": "/api/magic-schools/illusion"
+    },
+    "classes": [
+      {
+        "index": "bard",
+        "name": "Bard",
+        "url": "/api/classes/bard"
+      },
+      {
+        "index": "sorcerer",
+        "name": "Sorcerer",
+        "url": "/api/classes/sorcerer"
+      },
+      {
+        "index": "wizard",
+        "name": "Wizard",
+        "url": "/api/classes/wizard"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/phantasmal-force"
+  },
+  {
+    "index": "power-word-heal",
+    "name": "Power Word Heal",
+    "desc": [
+      "A wave of energy washes over the creature you touch. The target regains all its hit points. If the creature is charmed, frightened, paralyzed, or stunned, the condition ends. If the creature is prone, it can use its reaction to stand up. This spell has no effect on undead or constructs."  
+    ],
+    "range": "Touch",
+    "components": ["V", "S"],
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 9,
+    "school": {
+      "index": "evocation",
+      "name": "Evocation",
+      "url": "/api/magic-schools/evocation"
+    },
+    "classes": [
+      {
+        "index": "bard",
+        "name": "Bard",
+        "url": "/api/classes/bard"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/power-word-heal"
+  },
+  {
+    "index": "searing-smite",
+    "name": "Searing Smite",
+    "desc": [
+      "The next time you hit a creature with a melee weapon attack during the spell's duration, your weapon flares with white-hot intensity, and the attack deals an extra 1d6 fire damage to the target and causes the target to ignite in flames. At the start of each of its turns until the spell ends, the target must make a constitution saving throw. On a failed save, it takes 1d6 fire damage. On a successful save, the spell ends. If the target or a creature within 5 feet of it uses an action to put out the flames, or if some other effect douses the flames (such as the target being submerged in water), the spell ends."
+    ],
+    "higher_level": [
+      "When you cast this spell using a spell slot of 2nd level or higher, the extra damage dealt by the attack increases by 1d6 for each slot level above 1st."
+    ],
+    "range": "Self",
+    "components": ["V"],
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 bonus action",
+    "level": 1,
+    "damage": {
+      "damage_type": {
+        "index": "fire",
+        "name": "Fire",
+        "url": "/api/damage-types/fire"
+      },
+      "damage_at_slot_level": {
+        "2": "2d6",
+        "3": "3d6",
+        "4": "4d6",
+        "5": "5d6",
+        "6": "6d6",
+        "7": "7d6",
+        "8": "8d6",
+        "9": "9d6"
+      }
+    },
+    "school": {
+      "index": "evocation",
+      "name": "Evocation",
+      "url": "/api/magic-schools/evocation"
+    },
+    "classes": [
+      {
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/api/classes/paladin"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/searing-smite"
+  },
+  {
+    "index": "staggering-smite",
+    "name": "Staggering Smite",
+    "desc": [
+      "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon pierces both body and mind, and the attack deals an extra 4d6 psychic damage to the target. The target must make a wisdom saving throw. On a failed save, it has disadvantage on attack rolls and ability checks, and can't take reactions, until the end of its next turn."
+    ],
+    "range": "Self",
+    "components": ["V"],
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 bonus action",
+    "level": 4,
+    "damage": {
+      "damage_type": {
+        "index": "thunder",
+        "name": "Thunder",
+        "url": "/api/damage-types/thunder"
+      },
+      "damage_at_slot_level": {
+        "4": "4d6"
+      }
+    },
+    "dc": {
+      "dc_type": {
+        "index": "wis",
+        "name": "WIS",
+        "url": "/api/ability-scores/wis"
+      },
+      "dc_success": "none"
+    },
+    "school": {
+      "index": "evocation",
+      "name": "Evocation",
+      "url": "/api/magic-schools/evocation"
+    },
+    "classes": [
+      {
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/api/classes/paladin"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/staggering-smite"
+  },
+  {
+    "index": "thorn-whip",
+    "name": "Thorn Whip",
+    "desc": [
+      "You create a long, vine-like whip covered in thorns that lashes out at your command toward a creature in range. Make a melee spell attack against the target. If the attack hits, the creature takes 1d6 piercing damage, and if the creature is Large or smaller, you pull the creature up to 10 feet closer to you.",
+      "This spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6)."  
+    ],
+    "range": "30 feet",
+    "components": ["V", "S", "M"],
+    "material": "The stem of a plant with thorns.",
+    "ritual": false,
+    "duration": "Instantaneous",
+    "concentration": false,
+    "casting_time": "1 action",
+    "level": 0,
+    "damage": {
+      "damage_type": {
+        "index": "piercing",
+        "name": "Piercing",
+        "url": "/api/damage-types/piercing"
+      },
+      "damage_at_character_level": {
+        "1": "1d6",
+        "5": "2d6",
+        "11": "3d6",
+        "17": "4d6"
+      }
+    },
+    "school": {
+      "index": "transmutation",
+      "name": "Transmutation",
+      "url": "/api/magic-schools/transmutation"
+    },
+    "classes": [
+      {
+        "index": "druid",
+        "name": "Druid",
+        "url": "/api/classes/druid"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/thron-whip"
+  },
+  {
+    "index": "thunderous-smite",
+    "name": "Thunderous Smite",
+    "desc": [
+      "The first time you hit with a melee weapon attack during this spell's duration, your weapon rings with thunder that is audible within 300 feet of you, and the attack deals an extra 2d6 thunder damage to the target. Additionally, if the target is a creature, it must succeed on a strength saving throw or be pushed 10 feet away from you and knocked prone."
+    ],
+    "range": "Self",
+    "components": ["V"],
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 bonus action",
+    "level": 1,
+    "damage": {
+      "damage_type": {
+        "index": "thunder",
+        "name": "Thunder",
+        "url": "/api/damage-types/thunder"
+      },
+      "damage_at_slot_level": {
+        "1": "2d6"
+      }
+    },
+    "dc": {
+      "dc_type": {
+        "index": "str",
+        "name": "STR",
+        "url": "/api/ability-scores/str"
+      },
+      "dc_success": "none"
+    },
+    "area_of_effect": {
+      "type": "sphere",
+      "size": 300
+    },
+    "school": {
+      "index": "evocation",
+      "name": "Evocation",
+      "url": "/api/magic-schools/evocation"
+    },
+    "classes": [
+      {
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/api/classes/paladin"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/thunderous-smite"
+  },
+  {
+    "index": "tsunami",
+    "name": "Tsunami",
+    "desc": [
+      "A wall of water springs into existence at the point you choose within range. You can make the wall up to 300 feet long, 300 feet high, and 50 feet thick. The wall lasts for the duration.",
+      "When the wall appears, each creature within its area must make a strength saving throw. On a failed save, a creature takes 6d10 bludgeoning damage, or half as much damage on a successful save.",
+      "At the start of each of your turns after the wall appears, the wall, along with any creatures in it, moves 50 feet away from you. Any Huge or smaller creature inside the wall or whose space the wall enters when it moves must succeed on a strength saving throw or take 5d10 bludgeoning damage. A creature can take this damage only once per round. At the end of the turn, the wall's height is reduced by 50 feet, and the damage creatures take from the spell on subsequent rounds is reduced by 1d10. When the wall reaches 0 feet in height, the spell ends.",
+      "A creature caught in the wall can move by swimming. Because of the force of the wave, though, the creature must make a successful strength (athletics) check against your spell save DC in order to move at all. If it fails the check, it can't move. A creature that moves out of the area falls to the ground."
+    ],
+    "range": "Sight",
+    "components": ["V", "S"],
+    "ritual": false,
+    "duration": "Up to 6 rounds",
+    "concentration": true,
+    "casting_time": "1 minute",
+    "level": 8,
+    "damage": {
+      "damage_type": {
+        "index": "bludgeoning",
+        "name": "Bludgeoning",
+        "url": "/api/damage-types/bludgeoning"
+      },
+      "damage_at_slot_level": {
+        "8": "6d10"
+      }
+    },
+    "dc": {
+      "dc_type": {
+        "index": "str",
+        "name": "STR",
+        "url": "/api/ability-scores/str"
+      },
+      "dc_success": "half"
+    },
+    "area_of_effect": {
+      "type": "line",
+      "size": 300
+    },
+    "school": {
+      "index": "conjuration",
+      "name": "Conjuration",
+      "url": "/api/magic-schools/conjuration"
+    },
+    "classes": [
+      {
+        "index": "druid",
+        "name": "Druid",
+        "url": "/api/classes/druid"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/tsunami"
+  },
+  {
+    "index": "wrathful-smite",
+    "name": "Wrathful Smite",
+    "desc": [
+      "The next time you hit with a melee weapon attack during this spell's duration, your attack deals an extra 1d6 psychic damage. Additionally, if the target is a creature, it must make a wisdom saving throw or be frightened of you until the spell ends. As an action, the creature can make a wisdom check against your spell save DC to steel its resolve and end this spell."
+    ],
+    "range": "Self",
+    "components": ["V"],
+    "ritual": false,
+    "duration": "Up to 1 minute",
+    "concentration": true,
+    "casting_time": "1 bonus action",
+    "level": 1,
+    "damage": {
+      "damage_type": {
+        "index": "psychic",
+        "name": "Psychic",
+        "url": "/api/damage-types/psychic"
+      },
+      "damage_at_slot_level": {
+        "1": "1d6"
+      }
+    },
+    "dc": {
+      "dc_type": {
+        "index": "wis",
+        "name": "WIS",
+        "url": "/api/ability-scores/wis"
+      },
+      "dc_success": "none"
+    },
+    "school": {
+      "index": "evocation",
+      "name": "Evocation",
+      "url": "/api/magic-schools/evocation"
+    },
+    "classes": [
+      {
+        "index": "paladin",
+        "name": "Paladin",
+        "url": "/api/classes/paladin"
+      }
+    ],
+    "subclasses": [],
+    "url": "/api/spells/wrathful-smite"
   }
 ]

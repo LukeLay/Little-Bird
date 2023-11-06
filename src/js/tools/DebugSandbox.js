@@ -15,6 +15,8 @@ const DebugSandbox = () => {
 
             <BackGroundImage image="public/img/sword-coast-adventurers-guide-cover-art.png" />
 
+                <AnalyzeLibrary src={"Spells"}/>
+
                 <AnalyzeLibrary src={"Alignments"}/>
                 <AnalyzeLibrary src={"Backgrounds"}/>
                 <AnalyzeLibrary src={"Classes"}/>

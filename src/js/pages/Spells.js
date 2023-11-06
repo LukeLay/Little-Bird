@@ -16,6 +16,10 @@ const Spells = () => {
     fetch("public/data/5e-SRD-Spells.json")
       .then((response) => response.json())
       .then((data) => {
+
+        //Sort by name
+        data.sort((a, b) => a["name"].localeCompare(b["name"]));
+
         setSpells(data);
       })
       .catch((error) => {

@@ -45,7 +45,7 @@ const Reference = () => {
                                 <tr><td style={cellStyle}><span style={{ fontWeight: "bold", color: "var(--bs-primary)" }}>Carrying Capacity</span></td><td style={cellStyle}>15 x Strength Ability Score</td></tr>
                                 <tr><td style={cellStyle}><span style={{ fontWeight: "bold", color: "var(--bs-primary)" }}>Initiative Bonus</span></td><td style={cellStyle}>Dexterity Modifier</td></tr>
                                 <tr><td style={cellStyle}><span style={{ fontWeight: "bold", color: "var(--bs-primary)" }}>Passive Perception</span></td><td style={cellStyle}>10 + Perception Skill</td></tr>
-                                <tr><td style={cellStyle}><span style={{ fontWeight: "bold", color: "var(--bs-primary)" }}>Spell Save DC</span></td><td style={cellStyle}>8 + Proficiency Bonus</td></tr>
+                                <tr><td style={cellStyle}><span style={{ fontWeight: "bold", color: "var(--bs-primary)" }}>Spell Save DC</span></td><td style={cellStyle}>8 + Proficiency Bonus + Spellcast Ability Modifier</td></tr>
                                 <tr><td style={cellStyle}><span style={{ fontWeight: "bold", color: "var(--bs-primary)" }}>Spell Attack Bonus</span></td><td style={cellStyle}>Spellcasting Ability Modifier + Proficiency Bonus</td></tr>
                                 <tr><td style={cellStyle}><span style={{ fontWeight: "bold", color: "var(--bs-primary)" }}>Armor Class (AC)</span></td><td style={cellStyle}>Base Armor Class (Race/Class/Equipment) + Dexterity Modifier (light/medium armor) + Shield AC (if applicable)</td></tr>
                             </tbody>

@@ -101,8 +101,8 @@ const SpellDetail = (props) => {
 
                                             <tr className="table-dark"><td style={headerStyle}><b>Ritual</b></td><td style={cellStyle}>{spell["ritual"] ? "Yes" : "No"}</td></tr>
                                             <tr className="table-dark"><td style={headerStyle}><b>Concentration</b></td><td style={cellStyle}>{spell["concentration"] ? "Yes" : "No"}</td></tr>
-                                            <tr className="table-dark"><td style={headerStyle}><b>Classes</b></td><td style={cellStyle}>{spell["classes"].map((playerClass, index) => (<span key={index}>{index > 0 && ", "}{playerClass["name"]}</span>))}</td></tr>
-                                            <tr className="table-dark"><td style={headerStyle}><b>Subclasses</b></td><td style={cellStyle}>{spell["subclasses"].map((playerClass, index) => (<span key={index}>{index > 0 && ", "}{playerClass["name"]}</span>))}</td></tr>
+                                            <tr className="table-dark"><td style={headerStyle}><b>Classes</b></td><td style={cellStyle}>{spell["classes"].map((playerClass, index) => (<span key={index}>{index > 0 && ", "}<Link to={`/Classes/${playerClass["index"]}`} style={{textDecoration: "none"}}>{playerClass["name"]}</Link></span>))}</td></tr>
+                                            {/* <tr className="table-dark"><td style={headerStyle}><b>Subclasses</b></td><td style={cellStyle}>{spell["subclasses"].map((playerClass, index) => (<span key={index}>{index > 0 && ", "}{playerClass["name"]}</span>))}</td></tr> */}
                                             <tr className="table-dark"><td style={headerStyle}><b>Components</b></td><td style={cellStyle}>{spell["components"].map((component, index) => (<span key={index}>{index > 0 && ", "}{component}</span>))}</td></tr>
 
                                         </tbody>
@@ -205,7 +205,7 @@ const SpellDetail = (props) => {
                                                         && spell["dc"]["dc_success"] != undefined
                                                         ? (
                                                             <div>
-                                                                {spell["dc"]["dc_type"]["name"]} - {spell["dc"]["dc_success"] == "none" ? "No damage" : spell["dc"]["dc_success"] + " damage"}
+                                                                {spell["dc"]["dc_type"]["name"]} - {spell["dc"]["dc_success"] == "none" ? "No Effect" : spell["dc"]["dc_success"] + " damage"}
                                                             </div>
                                                         )
                                                         : <div><span style={{ opacity: "0.25" }}><i>none</i></span></div>
