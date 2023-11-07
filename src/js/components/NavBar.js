@@ -44,7 +44,7 @@ const NavBar = () => {
 
                 <div className="container-fluid" style={{ opacity: "95%" }} >
 
-                <div className="navbar-brand" onClick={() => { toast(RandomFact) }}><Applogo w={84} h={84} flipped={false} animate={false}/></div> 
+                 
                 {/* <div className="navbar-brand" onClick={() => { window.location.reload() }}><Applogo w={84} h={84} /></div>               */}
 
                     <div className="collapse navbar-collapse" id="navbarColor01" style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly" }}>
@@ -137,6 +137,8 @@ const NavBar = () => {
                             </li>
 
                         </ul>
+
+                        <div className="navbar-brand" onClick={() => { toast(RandomFact) }}><Applogo w={84} h={84} flipped={false} animate={false}/></div>
 
                     </div>
 
