@@ -30,6 +30,7 @@ import DebugSandbox from "./tools/DebugSandbox";
 import Features from "./pages/Features";
 import FeatureDetail from "./detail/FeatureDetail";
 
+//electron-packager "$(node -e "const path = require('path'); console.log(path.join(process.env.USERPROFILE, 'Documents', 'GitHub', '[YOUR_APP_NAME_HERE]'))")" [YOUR_APP_NAME_HERE] --platform=win32 --arch=x64 --electron-version=26.1.0 --overwrite
 export default function App() {
 
     //Control the startup animation
