@@ -114,7 +114,7 @@ const NavBar = () => {
                             </li> */}
 
                             <li className="nav-item navButton">
-                                <Link className="nav-link" to="/" style={navButtonStyle}>
+                                <Link className="nav-link" to="/Features" style={navButtonStyle}>
                                     <FontAwesomeIcon icon={faStar} size="2x" color="" />
                                     Features
                                 </Link>

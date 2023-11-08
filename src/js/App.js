@@ -27,6 +27,8 @@ import Backgrounds from "./pages/Backgrounds";
 import MagicItems from "./pages/MagicItems";
 import MagicItemDetail from "./detail/MagicItemDetail";
 import DebugSandbox from "./tools/DebugSandbox";
+import Features from "./pages/Features";
+import FeatureDetail from "./detail/FeatureDetail";
 
 export default function App() {
 
@@ -92,6 +94,9 @@ export default function App() {
 
                                     <Route exact path="/MagicItems" component={MagicItems} />
                                     <Route exact path="/MagicItems/:magicItemName" component={MagicItemDetail} />
+
+                                    <Route exact path="/Features" component={Features} />
+                                    <Route exact path="/Features/:featureName" component={FeatureDetail} />
 
 
                                     <Route exact path="/DebugSandbox" component={DebugSandbox} />

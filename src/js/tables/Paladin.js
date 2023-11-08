@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const Paladin = () => {
 
@@ -81,17 +82,10 @@ const Paladin = () => {
                                         {level["prof_bonus"] ? `+${level["prof_bonus"]}` : "-"}
                                     </td>
                                     <td style={cellStyle}>
-                                        {level["features"].length === 0 ? (
-                                            <div>
-                                                <span style={{ opacity: "0.25" }}>
-                                                    <i>none</i>
-                                                </span>
-                                            </div>
-                                        ) : (
-                                            level["features"].map((feature, index) => (
-                                                <span key={index}>{index > 0 && ", "}{feature["name"]}</span>
-                                            ))
-                                        )}
+                                        {level["features"].length === 0
+                                            ? <div><span style={{ opacity: "0.25" }}><i>none</i></span></div>
+                                            : level["features"].map((feature, index) => <>•&nbsp;<Link to={`/Features/${feature["index"]}`} key={index}>{feature["name"]}<br /></Link></>)
+                                        }
                                     </td>
                                     <td style={{ ...cellStyle, textAlign: "center" }}>
                                         {level["spellcasting"] && level["spellcasting"]["spell_slots_level_1"]

@@ -145,11 +145,14 @@ const MagicItems = () => {
                             return (
                                 <tr key={index} className={index % 2 === 0 ? "table-active" : "table-dark"}>
                                     <td style={cellStyle}><span style={{ opacity: "0.25" }}>{index + 1}</span></td>
+
                                     <td style={cellStyle}>
-                                        <Link to={`/MagicItems/${item.index}`} style={{ ...cellStyle, textDecoration: "none", color: getNameColor(item["rarity"]["name"]) }}>
+                                        <Link to={`/MagicItems/${item.index}`} style={{ textDecoration: "none", fontWeight: "bold", color: getNameColor(item["rarity"]["name"]) }}>
                                             {item.name}
                                         </Link>
                                     </td>
+
+
                                     <td style={cellStyle}>
                                         {item["equipment_category"]["name"] || "None"}
                                     </td>
