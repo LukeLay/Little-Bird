@@ -180,7 +180,6 @@ const FeatureDetail = (props) => {
                                                                         Choose {feature["feature_specific"]["subfeature_options"]["choose"]} from: <br />
                                                                         {feature["feature_specific"]["subfeature_options"]["from"]["options"].map((option, index) => (
                                                                             <span key={index}>
-                                                                                {/* •&nbsp;{option["item"]["name"]}<br /> */}
                                                                                 •&nbsp;<Link to={`/Features/${option["item"]["index"]}`}>{option["item"]["name"]}</Link><br />
                                                                             </span>
                                                                         ))}

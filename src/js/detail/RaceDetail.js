@@ -368,8 +368,6 @@ const RaceDetail = (props) => {
                                     </div>
                                 </div>
 
-
-
                             </div>
 
                         </div>

@@ -5,7 +5,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import toast, { Toaster } from 'react-hot-toast';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDiceD20, faDragon, faBook, faHatWizard, faUser, faSquareRootVariable, faBriefcase, faChartSimple, faKitchenSet, faClockRotateLeft, faMagnifyingGlass, faCircleNodes, faWandSparkles, faBurst, faStar, faUsers, faClipboardList } from '@fortawesome/free-solid-svg-icons'
+import { faDiceD20, faDragon, faBook, faHatWizard, faUser, faSquareRootVariable, faBriefcase, faChartSimple, faKitchenSet, faClockRotateLeft, faMagnifyingGlass, faCircleNodes, faWandSparkles, faBurst, faStar, faUsers, faClipboardList, faList } from '@fortawesome/free-solid-svg-icons'
 
 
 import Applogo from "./AppLogo";
@@ -106,12 +106,12 @@ const NavBar = () => {
                             </Link>
                         </li> */}
 
-                            {/* <li className="nav-item navButton">
-                                <Link className="nav-link" to="/" style={navButtonStyle}>
-                                    <FontAwesomeIcon icon={faChartSimple} size="2x" color="" />
-                                    Abilities
+                            <li className="nav-item navButton">
+                                <Link className="nav-link" to="/Traits" style={navButtonStyle}>
+                                    <FontAwesomeIcon icon={faList} size="2x" color="" />
+                                    Traits
                                 </Link>
-                            </li> */}
+                            </li>
 
                             <li className="nav-item navButton">
                                 <Link className="nav-link" to="/Features" style={navButtonStyle}>

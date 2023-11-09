@@ -29,6 +29,8 @@ import MagicItemDetail from "./detail/MagicItemDetail";
 import DebugSandbox from "./tools/DebugSandbox";
 import Features from "./pages/Features";
 import FeatureDetail from "./detail/FeatureDetail";
+import Traits from "./pages/Traits";
+import TraitDetail from "./detail/TraitDetail";
 
 //electron-packager "$(node -e "const path = require('path'); console.log(path.join(process.env.USERPROFILE, 'Documents', 'GitHub', '[YOUR_APP_NAME_HERE]'))")" [YOUR_APP_NAME_HERE] --platform=win32 --arch=x64 --electron-version=26.1.0 --overwrite
 export default function App() {
@@ -98,6 +100,9 @@ export default function App() {
 
                                     <Route exact path="/Features" component={Features} />
                                     <Route exact path="/Features/:featureName" component={FeatureDetail} />
+
+                                    <Route exact path="/Traits" component={Traits} />
+                                    <Route exact path="/Traits/:traitName" component={TraitDetail} />
 
 
                                     <Route exact path="/DebugSandbox" component={DebugSandbox} />

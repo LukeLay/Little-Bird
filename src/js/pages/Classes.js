@@ -69,10 +69,20 @@ const Classes = () => {
                                         <span key={index}>{index > 0 && ", "}{saving_throw.name}</span>
                                     ))}
                                 </td>
-                                <td style={{ ...cellStyle, width: "50%", wordWrap: "break-word" }}>
+                                {/* <td style={{ ...cellStyle, width: "50%", wordWrap: "break-word" }}>
                                     {playerclass.proficiencies.map((proficiency, index) => (
                                         <span key={index}>{index > 0 && ", "}{proficiency.name}</span>
                                     ))}
+                                </td> */}
+                                <td style={cellStyle}>
+                                    {playerclass["proficiencies"] && playerclass["proficiencies"].length > 0
+                                        ? playerclass["proficiencies"].map((proficiency, index) => (
+                                            <span key={index}>
+                                                •&nbsp;{proficiency["name"]}<br />
+                                            </span>
+                                        ))
+                                        : <span style={{ opacity: "0.25" }}><i>none</i></span>
+                                    }
                                 </td>
 
                             </tr>

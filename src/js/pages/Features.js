@@ -4,7 +4,7 @@ import BackGroundImage from "../components/BackgroundImage";
 
 const Features = () => {
     const [features, setFeatures] = useState([]);
-    const [sortColumn, setSortColumn] = useState("challenge_rating");
+    const [sortColumn, setSortColumn] = useState("name");
     const [sortOrder, setSortOrder] = useState("asc");
 
     const [searchQuery, setSearchQuery] = useState('');

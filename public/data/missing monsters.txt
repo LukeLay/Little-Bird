@@ -1,0 +1,112 @@
+Aarakocra
+Banshee
+Beholders
+Death Tyrant
+Spectator
+Needle Blight
+Twig Blight
+Vine Blight
+Bugbear Cheif
+Bullywug
+Cambion
+Carrion Crawler
+Crawling Claw
+Cyclops
+Death Knight
+Demilich
+Barlgura
+Chasme
+Goristro
+Manes
+Shadow Demon
+Yochlol
+Spined Devil
+Allosaurus
+Ankylosaurus
+Pteranodon
+Displacer Beast
+Adult Blue Dracolich
+Young Red Shadow Dragon
+Drow Elite Warrior
+Drow Mage
+Drow Priestess of Lolth
+Empyrean
+Faerie Dragon
+Flameskull
+Flumph
+Fomorian
+Gas Spore
+Galeb Duhr
+Dao
+Marid
+Githyanki Warrior
+Githyanki Knight
+Githzerai Monk
+Githzerai Zerth
+Gnoll Pack Lord
+Gnoll Fang of Yeenoghu
+Goblin Boss
+Grell
+Grick Alpha
+Helmed Horror
+Hobgoblin Captain
+Hobgoblin Warlord
+Hook Horror
+Intellect Devourer
+Jackalwere
+Kenku
+Winged Kobold
+Kuo-Toa
+Kuo-Toa Archpriest
+Kuo-Toa Whip
+Lizardfolk Shaman
+Lizardfolk King/Queen
+Mud Mephit
+Smoke Mephit
+Mind Flayer
+Monodrone
+Duodrone
+Tridrone
+Quadrone
+Pentadrone
+Myconid Sprout
+Quaggoth Spore Servant
+Myconid Adult
+Myconid Sovereign
+Bone Naga
+Nothic
+Half-Ogre
+Orc War Chief
+Orc Eye of Gruumsh
+Orog
+Otyugh
+Peryton
+Piercer
+Pixie
+Quaggoth
+Young Remorhaz
+Revenant
+Sahuagin Priestess
+Sahuagin Baron
+Fire Snake
+Scarecrow
+Red Slaad
+Slaad Tadpole
+Blue Slaad
+Green Slaad
+Gray Slaad
+Death Slaad
+Thri-Kreen
+Troglodyte
+Umber Hulk
+Water Weird
+Yeti
+Yuan-Ti Abomination
+Yuan-Ti Malison
+Yuan-Ti Pureblood
+Arcanaloth
+Mezzoloth
+Nycaloth
+Ultroloth
+Zombie
+Beholder Zombie
