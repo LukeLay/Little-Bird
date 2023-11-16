@@ -1,0 +1,252 @@
+[
+    {
+        "index": "mirror-of-reflection",
+        "name": "Mirror of Reflection",
+        "equipment_category": {
+            "index": "wondrous-items",
+            "name": "Wondrous Items",
+            "url": "/api/equipment-categories/wondrous-items"
+        },
+        "rarity": {
+            "name": "Artifact"
+        },
+        "variants": [],
+        "variant": false,
+        "desc": [
+            "Wondrous item, very rare (requires attunement)",
+            "A small ornate oval mirror framed in polished silver, its surface seemingly infused with ethereal wisps that dance and shimmer as it captures and reflects ambient light, and upon closer inspection, intricate celestial patterns swirl within the glass, revealing its mystical nature.",
+            "While holding this mirror, when another member of your party recieves an inspiration point, you also recieve one."
+        ],
+        "url": "/api/magic-items/mirror-of-reflection"
+    },
+    {
+        "index": "amulet-of-prowess",
+        "name": "Amulet of Prowess",
+        "equipment_category": {
+            "index": "wondrous-items",
+            "name": "Wondrous Items",
+            "url": "/api/equipment-categories/wondrous-items"
+        },
+        "rarity": {
+            "name": "Artifact"
+        },
+        "variants": [],
+        "variant": false,
+        "desc": [
+            "Wondrous item, very rare (requires attunement)",
+            "Adorned with an orange jewel that glows with an internal warmth, is intricately crafted from gold, its surface etched with delicate runes that flicker with a subtle flame-like radiance.",
+            "While wearing this amulet, you gain a +4 bonus to one ability score of your choice, and you gain a +1 bonus to all saving throws."
+        ],
+        "url": "/api/magic-items/amulet-of-prowess"
+    },
+    {
+        "index": "ring-of-resilience",
+        "name": "Ring of Resilience",
+        "equipment_category": {
+            "index": "wondrous-items",
+            "name": "Wondrous Items",
+            "url": "/api/equipment-categories/wondrous-items"
+        },
+        "rarity": {
+            "name": "Artifact"
+        },
+        "variants": [],
+        "variant": false,
+        "desc": [
+            "Wondrous item, very rare (requires attunement)",
+            "Crowned by a resplendent magic emerald, is set in a band of silver, and its gem exudes an enchanting, ever-shifting kaleidoscope of green hues that seem to echo the mysteries of nature.",
+            "While wearing this ring, once per long rest, when your hitpoints are reduced to 0, you are instead reduced to 1 hitpoint, and you gain resistance to all damage until the end of your next turn."
+        ],
+        "url": "/api/magic-items/ring-of-resilience"
+    },
+    {
+        "index": "orb-of-souls",
+        "name": "Orb of Souls",
+        "equipment_category": {
+            "index": "wondrous-items",
+            "name": "Wondrous Items",
+            "url": "/api/equipment-categories/wondrous-items"
+        },
+        "rarity": {
+            "name": "Artifact"
+        },
+        "variants": [],
+        "variant": false,
+        "desc": [
+            "Wondrous item, very rare (requires attunement)",
+            "A magical gem of perfect symmetry, possesses a captivating spherical form with a radiant red hue on its upper hemisphere, gradually transitioning to a pristine white on the lower hemisphere, creating a mesmerizing equilibrium of contrasting colors.",
+            "While holding, you gain the power to ensnare the essence of a fallen creature, allowing you to summon and command the creature until the next long rest or its defeat.",
+            "The orb can then be refilled with a new captured soul if empty.",
+            "The orb can only hold one soul at a time.",
+            "The orb can only capture the soul of a creature that has been dead for less than 1 minute, that has a challenge rating equal to or lower than the player's combined class levels, and that is neither a construct nor an undead."
+        ],
+        "url": "/api/magic-items/orb-of-souls"
+    },
+    {
+        "index": "emblem-of-arcane-fury",
+        "name": "Emblem of Arcane Fury",
+        "equipment_category": {
+            "index": "wondrous-items",
+            "name": "Wondrous Items",
+            "url": "/api/equipment-categories/wondrous-items"
+        },
+        "rarity": {
+            "name": "Artifact"
+        },
+        "variants": [],
+        "variant": false,
+        "desc": [
+            "Wondrous item, very rare (requires attunement)",
+            "Suspended from a delicate chain, a radiant emblem intricately crafted from shimmering silver, depicting celestial motifs that softly glow with an otherworldly luminescence. The amulet hums with arcance power.",
+            "While in possession of this emblem, you gain the ability to cast Sunburst at will, without expending a spell slot, and without requiring material components.",
+            "The spell deals twice the normal amount of damage on hit",
+            "The emblem expends a charge when used, and regains a 1 charge at levels 4, 8, 12.",
+            "After level 16, the emblem regains 1 charge at the start of each day."
+        ],
+        "url": "/api/magic-items/emblem-of-arcane-fury"
+    },
+    {
+        "index": "Polyhedron of Unholy Luck",
+        "name": "Polyhedron of Unholy Luck",
+        "equipment_category": {
+            "index": "wondrous-items",
+            "name": "Wondrous Items",
+            "url": "/api/equipment-categories/wondrous-items"
+        },
+        "rarity": {
+            "name": "Artifact"
+        },
+        "variants": [],
+        "variant": false,
+        "desc": [
+            "Wondrous item, very rare (requires attunement)",
+            "Crafted from a mesmerizing material that shifts in color, displaying an iridescent sheen as it responds to the surrounding magic, and each face is adorned with arcane symbols that seem to faintly shimmer with mystical energy.",
+            "When in your possession, the polyhedron accumulates a charge with every natural 20 rolled at the gaming table.",
+            "You may expend three charges as a bonus action to invoke its unholy magic, bestowing triple advantage on any one subsequent roll."
+        ],
+        "url": "/api/magic-items/polyhedron-of-unholy-luck"
+    },
+    {
+        "index": "runestone-of-the-trickster",
+        "name": "Runestone of The Trickster",
+        "equipment_category": {
+            "index": "wondrous-items",
+            "name": "Wondrous Items",
+            "url": "/api/equipment-categories/wondrous-items"
+        },
+        "rarity": {
+            "name": "Artifact"
+        },
+        "variants": [],
+        "variant": false,
+        "desc": [
+            "Wondrous item, very rare (requires attunement)",
+            "Etched with ancient symbols in glowing blue that appear to dance across its weathered surface. It emanates a soft, ethereal radiance, hinting at the arcane energies embedded within its mystical carvings.",
+            "when invoked, transforms natural 1 rolls into re-rolls, natural 2 rolls into 5, and natural 3 rolls into 10, offering a chance to twist fate in the favor of the possessor."
+        ],
+        "url": "/api/magic-items/runestone-of-the-trickster"
+    },
+    {
+        "index": "brooch-of-many-talents",
+        "name": "Brooch of Many Talents",
+        "equipment_category": {
+            "index": "wondrous-items",
+            "name": "Wondrous Items",
+            "url": "/api/equipment-categories/wondrous-items"
+        },
+        "rarity": {
+            "name": "Artifact"
+        },
+        "variants": [],
+        "variant": false,
+        "desc": [
+            "Wondrous item, very rare (requires attunement)",
+            "Etched with ancient symbols in glowing blue that appear to dance across its weathered surface. It emanates a soft, ethereal radiance, hinting at the arcane energies embedded within its mystical carvings.",
+            "when wielded, bestows upon the player the choice of acquiring proficinecy in any 2 skills, doubling the proficiency bonus for a skill that you are already proficient in, or a combination of one of each of these effects"
+        ],
+        "url": "/api/magic-items/brooch-of-many-talents"
+    },
+    {
+        "index": "lens-of-the-phantom",
+        "name": "Lens of The Phantom",
+        "equipment_category": {
+            "index": "wondrous-items",
+            "name": "Wondrous Items",
+            "url": "/api/equipment-categories/wondrous-items"
+        },
+        "rarity": {
+            "name": "Artifact"
+        },
+        "variants": [],
+        "variant": false,
+        "desc": [
+            "Wondrous item, very rare (requires attunement)",
+            "A sinister accessory, features a crystal lens that exudes an eerie, otherworldly glow, set within a frame of ethereal dark metal that seems to absorb and distort ambient light, giving the impression of a malevolent presence lurking within its intricate, ominous design.",
+            "Imparts the power to peer through surfaces up to 6 feet thick, allowing the possessor a unique and advantageous perspective on their surroundings.",
+            "While peering through the lens, you gain the ability to grab and manipulate any visible objects, as if you were unimpeded by the surface you are peering through."
+        ],
+        "url": "/api/magic-items/lens-of-the-phantom"
+    },
+    {
+        "index": "talisman-of-potential",
+        "name": "Talisman of Potential",
+        "equipment_category": {
+            "index": "wondrous-items",
+            "name": "Wondrous Items",
+            "url": "/api/equipment-categories/wondrous-items"
+        },
+        "rarity": {
+            "name": "Artifact"
+        },
+        "variants": [],
+        "variant": false,
+        "desc": [
+            "Wondrous item, very rare (requires attunement)",
+            "Crafted from a rare, translucent crystal adorned with intricate silver filigree, encapsulating a faint, pulsating glow at its core that seems to synchronize with the ebb and flow of cosmic energies, marking it as a conduit to otherworldly power.",
+            "The weilder is filled with the realized potential of all possible realities",
+            "The talisman bestows upon its wielder the formidable power to temporarily elevate all ability scores to a maximum of 20 for one hour, a boon granted once with each level gained, allowing the possessor to reach unparalleled heights of physical and mental prowess in critical moments."
+        ],
+        "url": "/api/magic-items/talisman-of-potential"
+    },
+    {
+        "index": "azure-horn-of-will",
+        "name": "Azure Horn of Will",
+        "equipment_category": {
+            "index": "wondrous-items",
+            "name": "Wondrous Items",
+            "url": "/api/equipment-categories/wondrous-items"
+        },
+        "rarity": {
+            "name": "Artifact"
+        },
+        "variants": [],
+        "variant": false,
+        "desc": [
+            "Wondrous item, very rare (requires attunement)",
+            "Hewn from the ancient horn of a blue dragon, bears a lustrous sheen that shimmers with electric energy.",
+            "Its surface etched with draconic runes that seem to faintly crackle with the residual power of its former owner, embodying the majestic and formidable essence of the creature from which it originated.",
+            "when sounded, imparts a surge of power to the bearer, granting an additional 1d4 bonus to any ability score, skill check, and saving throw performed for 1 minute after use, channeling the ancient blue dragon's essence to bolster the possessor's will."
+        ],
+        "url": "/api/magic-items/azure-horn-of-will"
+    },
+    {
+        "index": "purse-of-prosperity",
+        "name": "Purse of Prosperity",
+        "equipment_category": {
+            "index": "wondrous-items",
+            "name": "Wondrous Items",
+            "url": "/api/equipment-categories/wondrous-items"
+        },
+        "rarity": {
+            "name": "Artifact"
+        },
+        "variants": [],
+        "variant": false,
+        "desc": [
+            "Wondrous item, very rare (requires attunement)",
+            "A magical pouch of fine leather and embroidered with arcane symbols, possesses an ever-so-slight shimmer that hints at its mystical nature.",
+            "When opened, the interior seems to contain an otherworldly void, allowing the pouch to magically double the amount of coins that enter it for the first time."
+        ],
+        "url": "/api/magic-items/purse-of-prosperity"
+    }
+]
