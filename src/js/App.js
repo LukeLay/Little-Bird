@@ -122,9 +122,6 @@ export default function App() {
     );
 }
 
-
-
-
 //Light
 //import "../style/bootswatch_v5.3/bootstrap-cerulean.css";
 //import "../style/bootswatch_v5.3/bootstrap-cosmo.css";
@@ -152,7 +149,6 @@ export default function App() {
 //Minified
 //import "../style/bootswatch_v5.3/bootstrap-materia.css";
 //import "../style/bootswatch_v5.3/bootstrap-simplex.css";
-
 
 //Novelty
 //import "../style/bootswatch_v5.3/bootstrap-lux.css";
